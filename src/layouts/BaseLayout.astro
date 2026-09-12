@@ -35,6 +35,13 @@ const {
           "work.goobo.sub": "AI PM · UX Design · 2026",
           "work.shelter.sub": "Narrative 2D Platformer · Steam · 2025",
           "work.office.sub": "Environment Art · UE5 · 2024",
+          "work.wuthering.title": "Wuthering Waves",
+          "work.goobo.title": "Goobo — AI Ita Bag",
+          "work.shelter.title": "The Little Shelter",
+          "work.office.title": "Abandon Office",
+          "book.flow.title": "Flow",
+          "book.playful.title": "A Playful Production Process",
+          "book.atomic.title": "Atomic Design",
           "lab.1.title": "AI NPC Memory", "lab.2.title": "Generative Interfaces", "lab.3.title": "Game Prototypes",
           "lab.sub": "EXPERIMENT · 2026",
           "tag.all": "All", "tag.psychology": "Psychology", "tag.gamesProduction": "Games / Production", "tag.designSystems": "Design Systems",
@@ -56,6 +63,13 @@ const {
           "work.goobo.sub": "AI 产品经理 · UX 设计 · 2026",
           "work.shelter.sub": "叙事 2D 平台跳跃游戏 · Steam · 2025",
           "work.office.sub": "环境美术 · UE5 · 2024",
+          "work.wuthering.title": "鸣潮",
+          "work.goobo.title": "Goobo 智能娃包",
+          "work.shelter.title": "《The Little Shelter》",
+          "work.office.title": "废弃办公室",
+          "book.flow.title": "《心流》",
+          "book.playful.title": "《妙趣横生的游戏制作之旅》",
+          "book.atomic.title": "《原子设计》",
           "lab.1.title": "AI NPC 记忆", "lab.2.title": "生成式界面", "lab.3.title": "游戏原型",
           "lab.sub": "实验 · 2026",
           "tag.all": "全部", "tag.psychology": "心理学", "tag.gamesProduction": "游戏 / 制作", "tag.designSystems": "设计系统",
@@ -74,6 +88,10 @@ const {
         document.querySelectorAll("[data-i18n-html]").forEach((el) => {
           const v = I18N[lang][el.dataset.i18nHtml];
           if (v != null) el.innerHTML = v;
+        });
+        document.querySelectorAll("[data-i18n-attr-title]").forEach((el) => {
+          const v = I18N[lang][el.dataset.i18nAttrTitle];
+          if (v != null) el.setAttribute("data-title", v);
         });
         document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
         const t = document.getElementById("langToggle");
