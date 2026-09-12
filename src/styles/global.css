@@ -174,10 +174,10 @@ nav a:hover:after{right:0}
 .card-line{display:grid;grid-template-columns:auto 1fr auto;gap:15px;align-items:center}
 .card-line h3{font-family:var(--serif);font-size:21px;font-weight:500;margin:0}
 .card-line span{font-size:12px;color:var(--muted)}
-.work-card p{font-size:11px;color:rgba(3,4,94,.5);margin:7px 0 0;letter-spacing:.03em}
+.work-card p{font-size:12px;color:rgba(3,4,94,.55);margin:7px 0 0;letter-spacing:.03em}
 
 .lib-cover{background-color:var(--ice);background-size:cover;background-position:center;background-repeat:no-repeat}
-.work-card .bio{font-size:12px;line-height:1.55;color:rgba(3,4,94,.62);margin:8px 0 0;letter-spacing:0}
+.work-card .bio{font-size:14px;line-height:1.7;color:rgba(3,4,94,.68);margin:8px 0 0;letter-spacing:0}
 .work-card.is-hidden{display:none}
 .library-filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px}
 .filter-btn{
@@ -207,6 +207,15 @@ nav a:hover:after{right:0}
 html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 ::selection{background:var(--ice);color:var(--ink)}
 :focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:2px}
+
+/* ---- Chinese readability ---- */
+html[lang=zh-CN] .hero h1,html[lang=zh-CN] .about-page h1,html[lang=zh-CN] .hero-full h1{line-height:1.18;letter-spacing:0}
+html[lang=zh-CN] .lede{line-height:1.75}
+html[lang=zh-CN] .eyebrow,html[lang=zh-CN] .text-link{letter-spacing:.12em}
+html[lang=zh-CN] .section-head>h2 span:first-child{letter-spacing:.1em}
+html[lang=zh-CN] .filter-btn,html[lang=zh-CN] .tag{letter-spacing:.06em}
+html[lang=zh-CN] .art-caption{letter-spacing:.16em}
+html[lang=zh-CN] .bio{line-height:1.85}
 
 /* sticky frosted header */
 .site-header{
