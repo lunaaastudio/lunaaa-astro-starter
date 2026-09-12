@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&display=swap');
 
 :root{
   --bg:#ffffff;
@@ -8,8 +8,8 @@
   --ice:#90e0ef;
   --muted:rgba(3,4,94,.6);
   --rule:rgba(3,4,94,.18);
-  --serif:"Sora", Arial, sans-serif;
-  --sans:"Sora", Arial, sans-serif;
+  --serif:"Geist", Arial, sans-serif;
+  --sans:"Geist", Arial, sans-serif;
 }
 
 *{box-sizing:border-box}
