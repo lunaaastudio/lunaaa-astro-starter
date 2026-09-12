@@ -17,7 +17,7 @@
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans)}
 a{color:inherit;text-decoration:none}
-.shell{width:min(1180px,calc(100% - 64px));margin-inline:auto}
+.shell{width:min(1440px,calc(100% - 80px));margin-inline:auto}
 
 .site-header{
   display:flex;align-items:center;justify-content:space-between;
@@ -73,7 +73,7 @@ nav a:hover:after{right:0}
   background:linear-gradient(100deg,rgba(3,4,94,.66) 0%,rgba(3,4,94,.38) 45%,rgba(3,4,94,.06) 78%)
 }
 .hero-full .hero-inner{
-  position:relative;width:min(1180px,calc(100% - 64px));margin-inline:auto;
+  position:relative;width:min(1440px,calc(100% - 80px));margin-inline:auto;
   padding:96px 0
 }
 .hero-full .hero-copy{max-width:600px}
@@ -275,14 +275,18 @@ html[lang=zh-CN] .bio{line-height:1.85}
   .cursor-ring{display:none}
 }
 
+@media (max-width:1024px){
+  .card-grid{grid-template-columns:repeat(2,1fr)}
+}
+
 @media (max-width:900px){
   .hero{grid-template-columns:1fr;gap:35px;padding-top:40px}
   .art-panel{height:380px}
-  .card-grid{grid-template-columns:1fr}
 }
 
 @media (max-width:640px){
   .shell{width:calc(100% - 34px)}
+  .card-grid{grid-template-columns:1fr}
   .site-header{padding:20px 0}
   nav{gap:16px;font-size:12px}
   .hero{min-height:auto;padding:70px 0}
