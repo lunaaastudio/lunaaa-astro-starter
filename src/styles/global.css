@@ -81,17 +81,17 @@ nav a:hover:after{right:0}
   position:relative;width:min(1680px,calc(100% - 64px));margin-inline:auto;
   padding:96px 0
 }
-.hero-full .hero-copy{max-width:600px}
+.hero-full .hero-copy{max-width:640px}
 .hero-full h1{
   color:#fff;text-shadow:0 2px 26px rgba(3,4,94,.45);
-  font-size:clamp(40px,4.2vw,58px);line-height:1.08;letter-spacing:-.022em
+  font-size:clamp(44px,5vw,68px);line-height:1.06;letter-spacing:-.022em
 }
-.hero-full .lede{color:rgba(255,255,255,.94);font-size:18px;max-width:540px;margin:26px 0 30px}
-.hero-full .eyebrow{color:#caf0f8;font-size:12px;margin-bottom:24px}
+.hero-full .lede{color:rgba(255,255,255,.85);font-size:17px;max-width:500px;margin:24px 0 28px}
+.hero-full .eyebrow{color:#caf0f8;font-size:12px;margin-bottom:20px}
 .section-block{scroll-margin-top:32px}
 .hero-full .text-link{color:#fff}
 .hero-full .text-link span{background:#fff}
-.hero-skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:38px}
+.hero-skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:46px}
 .hero-skills span{
   font-size:11px;font-weight:500;letter-spacing:.1em;
   padding:7px 16px 8px;border-radius:999px;
