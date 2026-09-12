@@ -105,8 +105,8 @@ nav a:hover:after{right:0}
 .lab-b{background:linear-gradient(120deg,#00b4d8,#caf0f8 50%,#90e0ef)}
 .lab-c{background:linear-gradient(135deg,#90e0ef,#00b4d8 52%,#caf0f8)}
 
-#work .thumb{position:relative;overflow:hidden}
-#work .thumb:after{
+#work .thumb,#library .thumb{position:relative;overflow:hidden}
+#work .thumb:after,#library .thumb:after{
   content:attr(data-title);
   position:absolute;inset:0;
   display:flex;align-items:center;justify-content:center;
@@ -115,7 +115,7 @@ nav a:hover:after{right:0}
   color:#fff;font-family:var(--serif);font-size:24px;font-weight:500;letter-spacing:.02em;
   opacity:0;transition:opacity .28s ease
 }
-#work .work-card:hover .thumb:after{opacity:1}
+#work .work-card:hover .thumb:after,#library .work-card:hover .thumb:after{opacity:1}
 
 .card-line{display:grid;grid-template-columns:auto 1fr auto;gap:15px;align-items:center}
 .card-line h2{font-family:var(--serif);font-size:21px;font-weight:500;margin:0}
