@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Libre+Caslon+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&display=swap');
 
 :root{
   --bg:#caf0f8;
@@ -8,8 +8,8 @@
   --ice:#90e0ef;
   --muted:rgba(3,4,94,.6);
   --rule:rgba(3,4,94,.18);
-  --serif:"Libre Caslon Display", Georgia, serif;
-  --sans:"DM Sans", Arial, sans-serif;
+  --serif:"Sora", Arial, sans-serif;
+  --sans:"Sora", Arial, sans-serif;
 }
 
 *{box-sizing:border-box}
@@ -35,7 +35,7 @@ nav a:hover:after{right:0}
 }
 .eyebrow{font-size:11px;letter-spacing:.34em;color:var(--blue);margin:0 0 26px}
 .hero h1,.about-page h1{
-  font-family:var(--serif);font-weight:400;
+  font-family:var(--serif);font-weight:600;
   font-size:clamp(54px,6vw,86px);line-height:.98;letter-spacing:-.035em;
   margin:0
 }
@@ -94,7 +94,7 @@ nav a:hover:after{right:0}
 .lab-c{background:linear-gradient(135deg,#90e0ef,#00b4d8 52%,#caf0f8)}
 
 .card-line{display:grid;grid-template-columns:auto 1fr auto;gap:15px;align-items:center}
-.card-line h2{font-family:var(--serif);font-size:21px;font-weight:400;margin:0}
+.card-line h2{font-family:var(--serif);font-size:21px;font-weight:500;margin:0}
 .card-line span{font-size:12px;color:var(--muted)}
 .work-card p{font-size:11px;color:rgba(3,4,94,.5);margin:7px 0 0;letter-spacing:.03em}
 
@@ -105,7 +105,7 @@ nav a:hover:after{right:0}
 }
 .writing-list a:hover h2{color:var(--blue)}
 .writing-list span{font-size:10px;letter-spacing:.12em;color:var(--muted)}
-.writing-list h2{font-family:var(--serif);font-size:22px;font-weight:400;margin:0}
+.writing-list h2{font-family:var(--serif);font-size:22px;font-weight:500;margin:0}
 .writing-list b{font-weight:400}
 
 .footer{
