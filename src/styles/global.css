@@ -67,7 +67,7 @@ nav a:hover:after{right:0}
 /* full-bleed hero: image as section-wide background */
 .hero-full{
   width:100vw;margin-left:calc(50% - 50vw);
-  min-height:82vh;display:flex;align-items:center;
+  min-height:66vh;display:flex;align-items:center;
   position:relative;
   background-size:cover;background-position:center;background-repeat:no-repeat;
   background-color:var(--blue);
@@ -79,7 +79,7 @@ nav a:hover:after{right:0}
 }
 .hero-full .hero-inner{
   position:relative;width:min(1680px,calc(100% - 64px));margin-inline:auto;
-  padding:96px 0
+  padding:76px 0
 }
 .hero-full .hero-copy{max-width:640px}
 .hero-full h1{
@@ -324,8 +324,8 @@ html[lang=zh-CN] .bio{line-height:1.85}
   .header-inner{padding:20px 0}
   nav{gap:16px;font-size:12px}
   .hero{min-height:auto;padding:70px 0}
-  .hero-full{min-height:76vh;padding:0}
-  .hero-full .hero-inner{padding:64px 0}
+  .hero-full{min-height:68vh;padding:0}
+  .hero-full .hero-inner{padding:56px 0}
   .hero-full .art-caption{font-size:11px;letter-spacing:.14em}
   .hero-full .art-caption.right{top:24px;bottom:auto}
   .hero h1,.about-page h1{font-size:49px}
