@@ -100,8 +100,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <a href="#">VIEW ALL →</a>
       </div>
 
+      <div class="library-filters" role="group" aria-label="Filter books by tag">
+        <button class="filter-btn is-active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="psychology">Psychology</button>
+        <button class="filter-btn" data-filter="games-production">Games / Production</button>
+        <button class="filter-btn" data-filter="design-systems">Design Systems</button>
+      </div>
+
       <div class="card-grid">
-        <article class="work-card">
+        <article class="work-card" data-tag="psychology">
           <a href="https://www.amazon.com/dp/0061339202" target="_blank" rel="noopener">
             <div class="thumb lib-cover" data-title="Flow" style="background-image:url('/library-flow.jpg')"></div>
             <div class="card-line"><span>01</span><h2>Flow</h2><span>→</span></div>
@@ -110,7 +117,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           </a>
         </article>
 
-        <article class="work-card">
+        <article class="work-card" data-tag="games-production">
           <a href="https://www.playfulproductionprocess.com/" target="_blank" rel="noopener">
             <div class="thumb lib-cover" data-title="A Playful Production Process" style="background-image:url('/library-playful-production.jpg')"></div>
             <div class="card-line"><span>02</span><h2>A Playful Production Process</h2><span>→</span></div>
@@ -119,7 +126,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           </a>
         </article>
 
-        <article class="work-card">
+        <article class="work-card" data-tag="design-systems">
           <a href="https://atomicdesign.bradfrost.com/" target="_blank" rel="noopener">
             <div class="thumb lib-cover" data-title="Atomic Design" style="background-image:url('/library-atomic-design.jpg')"></div>
             <div class="card-line"><span>03</span><h2>Atomic Design</h2><span>→</span></div>
@@ -128,6 +135,20 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           </a>
         </article>
       </div>
+
+      <script>
+        const filterBtns = document.querySelectorAll(".filter-btn");
+        const bookCards = document.querySelectorAll("#library .work-card");
+        filterBtns.forEach((btn) =>
+          btn.addEventListener("click", () => {
+            filterBtns.forEach((b) => b.classList.toggle("is-active", b === btn));
+            const f = btn.dataset.filter;
+            bookCards.forEach((card) =>
+              card.classList.toggle("is-hidden", f !== "all" && card.dataset.tag !== f)
+            );
+          })
+        );
+      </script>
     </section>
   </main>
 </BaseLayout>
