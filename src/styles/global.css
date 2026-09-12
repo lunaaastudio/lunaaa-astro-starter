@@ -85,9 +85,13 @@ nav a:hover:after{right:0}
 .section-block{scroll-margin-top:32px}
 .hero-full .text-link{color:#fff}
 .hero-full .text-link span{background:#fff}
-.hero-full .art-caption{position:absolute;z-index:2}
-.hero-full .art-caption.left{left:26px;right:auto;top:auto;bottom:28px}
-.hero-full .art-caption.right{right:26px;bottom:28px}
+.hero-full .art-caption{
+  position:absolute;z-index:2;bottom:30px;
+  font-size:13px;font-weight:400;letter-spacing:.22em;line-height:1.5;
+  color:rgba(255,255,255,.92);white-space:nowrap
+}
+.hero-full .art-caption.left{left:26px;right:auto;top:auto}
+.hero-full .art-caption.right{right:26px}
 .art-panel:before{
   content:"";position:absolute;inset:auto -10% 28% -10%;height:30%;
   background:
@@ -252,7 +256,8 @@ html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
   .hero{min-height:auto;padding:70px 0}
   .hero-full{min-height:76vh;padding:0}
   .hero-full .hero-inner{padding:64px 0}
-  .hero-full .art-caption{font-size:13px}
+  .hero-full .art-caption{font-size:11px;letter-spacing:.14em}
+  .hero-full .art-caption.right{top:24px;bottom:auto}
   .hero h1,.about-page h1{font-size:49px}
   .hero-full h1{font-size:36px}
   .hero-full .lede{font-size:16px}
