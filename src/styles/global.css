@@ -173,9 +173,9 @@ html[lang=zh-CN] .hero-skills span{letter-spacing:.05em}
   background-size:cover;
   background-position:center 15%;
   background-repeat:no-repeat}
-.lab-a{background:linear-gradient(120deg,#03045e,#0077b6 55%,#03045e)}
-.lab-b{background:linear-gradient(120deg,#00b4d8,#caf0f8 50%,#90e0ef)}
-.lab-c{background:linear-gradient(135deg,#90e0ef,#00b4d8 52%,#caf0f8)}
+.lab-a{background:#03045e}
+.lab-b{background:#0077b6}
+.lab-c{background:#00b4d8}
 
 #work .thumb,#library .thumb{position:relative;overflow:hidden}
 #work .thumb:after,#library .thumb:after{
