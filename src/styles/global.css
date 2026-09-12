@@ -199,20 +199,19 @@ html[lang=zh-CN] .hero-skills span{letter-spacing:.05em}
 .card-line span{font-size:12px;color:var(--muted)}
 .work-card p{font-size:12px;color:rgba(3,4,94,.55);margin:7px 0 0;letter-spacing:.03em}
 
-/* work/lab card role as refined pill tag */
-#work .work-card a>p:first-of-type,#lab .work-card>p:first-of-type{
+/* card meta: refined type pill + plain meta text */
+.card-meta{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-top:11px}
+.pill{
   display:inline-block;padding:5px 14px 6px;border-radius:999px;
   background:rgba(0,119,182,.06);
   border:1px solid rgba(0,119,182,.22);
   color:var(--blue);
   font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;
-  margin-top:11px;
   transition:background .25s ease,border-color .25s ease
 }
-#work .work-card:hover a>p:first-of-type{
-  background:rgba(0,119,182,.11);border-color:rgba(0,119,182,.4)
-}
-html[lang=zh-CN] #work .work-card a>p:first-of-type,html[lang=zh-CN] #lab .work-card>p:first-of-type{letter-spacing:.05em}
+.work-card:hover .pill{background:rgba(0,119,182,.11);border-color:rgba(0,119,182,.4)}
+.card-meta .meta{font-size:11px;color:rgba(3,4,94,.45);letter-spacing:.06em}
+html[lang=zh-CN] .pill{letter-spacing:.05em}
 
 .lib-cover{background-color:var(--ice);background-size:cover;background-position:center;background-repeat:no-repeat}
 .work-card .bio{font-size:14px;line-height:1.7;color:rgba(3,4,94,.68);margin:8px 0 0;letter-spacing:0}
