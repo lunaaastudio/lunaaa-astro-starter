@@ -75,10 +75,14 @@ nav a:hover:after{right:0}
   position:relative;width:min(1180px,calc(100% - 64px));margin-inline:auto;
   padding:96px 0
 }
-.hero-full .hero-copy{max-width:640px}
-.hero-full h1{color:#fff;text-shadow:0 2px 26px rgba(3,4,94,.45)}
-.hero-full .lede{color:rgba(255,255,255,.94)}
-.hero-full .eyebrow{color:#caf0f8}
+.hero-full .hero-copy{max-width:600px}
+.hero-full h1{
+  color:#fff;text-shadow:0 2px 26px rgba(3,4,94,.45);
+  font-size:clamp(40px,4.2vw,58px);line-height:1.08;letter-spacing:-.022em
+}
+.hero-full .lede{color:rgba(255,255,255,.94);font-size:18px;max-width:540px;margin:26px 0 30px}
+.hero-full .eyebrow{color:#caf0f8;font-size:12px;margin-bottom:24px}
+.section-block{scroll-margin-top:32px}
 .hero-full .text-link{color:#fff}
 .hero-full .text-link span{background:#fff}
 .hero-full .art-caption{position:absolute;z-index:2}
@@ -211,6 +215,8 @@ nav a:hover:after{right:0}
   .hero-full .hero-inner{padding:64px 0}
   .hero-full .art-caption{font-size:13px}
   .hero h1,.about-page h1{font-size:49px}
+  .hero-full h1{font-size:36px}
+  .hero-full .lede{font-size:16px}
   .lede{font-size:17px}
   .art-panel{height:320px}
   .section-block{padding-bottom:58px}
