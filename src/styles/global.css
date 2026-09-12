@@ -170,16 +170,6 @@ nav a:hover:after{right:0}
 .card-line span{font-size:12px;color:var(--muted)}
 .work-card p{font-size:11px;color:rgba(3,4,94,.5);margin:7px 0 0;letter-spacing:.03em}
 
-.writing-list{border-top:1px solid var(--rule)}
-.writing-list a{
-  display:grid;grid-template-columns:180px 1fr 140px 25px;
-  align-items:center;gap:18px;border-bottom:1px solid var(--rule);padding:25px 0
-}
-.writing-list a:hover h2{color:var(--blue)}
-.writing-list span{font-size:10px;letter-spacing:.12em;color:var(--muted)}
-.writing-list h2{font-family:var(--serif);font-size:22px;font-weight:500;margin:0}
-.writing-list b{font-weight:400}
-
 .lib-cover{background-color:var(--ice);background-size:cover;background-position:center;background-repeat:no-repeat}
 .work-card .bio{font-size:12px;line-height:1.55;color:rgba(3,4,94,.62);margin:8px 0 0;letter-spacing:0}
 .work-card.is-hidden{display:none}
@@ -210,8 +200,6 @@ nav a:hover:after{right:0}
   .hero{grid-template-columns:1fr;gap:35px;padding-top:40px}
   .art-panel{height:380px}
   .card-grid{grid-template-columns:1fr}
-  .writing-list a{grid-template-columns:1fr;gap:8px}
-  .writing-list b{display:none}
 }
 
 @media (max-width:640px){
