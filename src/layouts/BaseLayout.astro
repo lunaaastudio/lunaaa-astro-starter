@@ -24,13 +24,13 @@ const {
     <script is:inline>
       const I18N = {
         en: {
-          "nav.work": "Work", "nav.lab": "AI Lab", "nav.library": "Library", "nav.about": "About",
+          "nav.work": "Work", "nav.lab": "AI Lab", "nav.library": "Library", "nav.skills": "Skills", "nav.about": "About",
           "hero.title": "Designer working across Games, AI & Human Experience.",
           "hero.lede": "I design interactive experiences at the intersection of technology, play, and human behavior.",
           "hero.explore": "<span></span> EXPLORE MY WORK →",
           "hero.captionLeft": "Games · AI · Design · A more human future.",
           "hero.captionRight": "PLAY · THINK · CREATE",
-          "sec.work": "SELECTED WORK", "sec.lab": "AI LAB", "sec.library": "LIBRARY",
+          "sec.work": "SELECTED WORK", "sec.lab": "AI LAB", "sec.library": "LIBRARY", "sec.skills": "SKILLS",
           "sec.viewAll": "VIEW ALL →",
           "work.wuthering.sub": "Game UX Design · 2026",
           "work.goobo.sub": "AI Smart Hardware · UX Design · 2026",
@@ -46,19 +46,20 @@ const {
           "lab.1.title": "AI NPC Memory", "lab.2.title": "Generative Interfaces", "lab.3.title": "Game Prototypes",
           "lab.sub": "EXPERIMENT · 2026",
           "tag.all": "All", "tag.psychology": "Psychology", "tag.gamesProduction": "Games / Production", "tag.designSystems": "Design Systems",
+          "skill.ux": "UX Design", "skill.game": "Game Design", "skill.3d": "3D Modeling", "skill.ai": "AI Design", "skill.motion": "Motion Design",
           "book.flow.bio": "The psychology classic on optimal experience — how deep, absorbed focus turns work and play into happiness.",
           "book.playful.bio": "Uncharted's lead designer on how great games get made — a playful, playtest-driven process from first idea to launch, no crunch required.",
           "book.atomic.bio": "The book that named design systems — atoms, molecules, organisms, and a shared language for building interfaces.",
           "about.title": "Designer, artist, and creative technologist exploring games, AI, and human experience."
         },
         zh: {
-          "nav.work": "作品", "nav.lab": "AI 实验室", "nav.library": "书架", "nav.about": "关于",
+          "nav.work": "作品", "nav.lab": "AI 实验室", "nav.library": "书架", "nav.skills": "技能", "nav.about": "关于",
           "hero.title": "横跨游戏、AI 与用户体验的设计师",
           "hero.lede": "我专注于交互体验设计，在技术、玩乐与人类行为的交汇处寻找答案。",
           "hero.explore": "<span></span> 查看我的作品 →",
           "hero.captionLeft": "游戏 · AI · 设计 · 更有人性的未来",
           "hero.captionRight": "玩乐 · 思考 · 创造",
-          "sec.work": "精选作品", "sec.lab": "AI 实验室", "sec.library": "书架",
+          "sec.work": "精选作品", "sec.lab": "AI 实验室", "sec.library": "书架", "sec.skills": "专业技能",
           "sec.viewAll": "查看全部 →",
           "work.wuthering.sub": "游戏 UX 设计 · 2026",
           "work.goobo.sub": "AI 智能硬件 · UX 设计 · 2026",
@@ -74,6 +75,7 @@ const {
           "lab.1.title": "AI NPC 记忆", "lab.2.title": "生成式界面", "lab.3.title": "游戏原型",
           "lab.sub": "实验 · 2026",
           "tag.all": "全部", "tag.psychology": "心理学", "tag.gamesProduction": "游戏 / 制作", "tag.designSystems": "设计系统",
+          "skill.ux": "UX 设计", "skill.game": "游戏设计", "skill.3d": "3D 建模", "skill.ai": "AI 设计", "skill.motion": "动效设计",
           "book.flow.bio": "心理学经典之作：全然投入的「心流」状态，如何让工作与生活都成为幸福的体验。",
           "book.playful.bio": "《神秘海域》主设计师的游戏开发方法论——以试玩为核心，从创意到上线，做出好游戏不必靠赶工。",
           "book.atomic.bio": "设计系统的奠基之作——原子、分子、有机体，一套构建界面的通用语言。",
@@ -114,7 +116,7 @@ const {
       /* scroll reveal */
       (function () {
         if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-        const targets = document.querySelectorAll(".section-head, .card-grid, .library-filters");
+        const targets = document.querySelectorAll(".section-head, .card-grid, .library-filters, .skill-list");
         const io = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
