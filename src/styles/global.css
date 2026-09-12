@@ -137,8 +137,8 @@ html[lang=zh-CN] .hero-skills span{letter-spacing:.05em}
 .art-caption.left{left:22px;top:144px}
 .art-caption.right{right:20px;bottom:24px;text-align:left}
 
-.section-block{border-top:1px solid var(--rule);padding:34px 0 84px}
-.section-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:34px}
+.section-block{border-top:1px solid var(--rule);padding:44px 0 100px}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:40px}
 .section-head>h2{display:flex;align-items:baseline;gap:22px;margin:0;font-weight:400}
 .section-head>h2 span:first-child{
   font-family:var(--display);font-style:italic;font-size:46px;font-weight:500;
@@ -149,8 +149,13 @@ html[lang=zh-CN] .hero-skills span{letter-spacing:.05em}
   letter-spacing:.05em;color:var(--ink)
 }
 
-.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.thumb{aspect-ratio:1.72/1;margin-bottom:15px;background:var(--ice)}
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.thumb{
+  aspect-ratio:1.72/1;margin-bottom:16px;background:var(--ice);
+  border-radius:12px;overflow:hidden;
+  transition:box-shadow .4s cubic-bezier(.22,1,.36,1)
+}
+.work-card:hover .thumb{box-shadow:0 20px 44px rgba(3,4,94,.16)}
 .scene-a{
   background-color:#0a1a3a;
   background-size:cover;
