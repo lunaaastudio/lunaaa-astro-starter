@@ -4,8 +4,33 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 <BaseLayout title="About — Luna Chen">
   <main class="shell">
     <section class="about-page">
-      <p class="eyebrow">ABOUT</p>
+      <p class="eyebrow" data-i18n="about.eyebrow">ABOUT</p>
       <h1 data-i18n="about.title">Designer, artist, and creative technologist exploring games, AI, and human experience.</h1>
+
+      <div class="about-bio">
+        <p data-i18n="about.p1">I'm Luna Chen, a designer working across games, AI, and interactive experiences — from game UX and AI hardware to narrative games and 3D environment art.</p>
+        <p data-i18n="about.p2">I care about how technology feels: playful, clear, and human. Right now I'm exploring how AI changes the way we design, build, and play.</p>
+      </div>
+
+      <div class="about-block">
+        <h2 class="about-h2" data-i18n="about.capabilities">Capabilities</h2>
+        <ul class="about-list">
+          <li><span data-i18n="skill.ux">UX Design</span><span>Figma · Adobe Illustrator</span></li>
+          <li><span data-i18n="skill.game">Game Design</span><span>Unity · Unreal Engine</span></li>
+          <li><span data-i18n="skill.3d">3D Modeling</span><span>Maya · Substance 3D Painter</span></li>
+          <li><span data-i18n="skill.ai">AI Design</span><span>ChatGPT · Midjourney · ComfyUI</span></li>
+          <li><span data-i18n="skill.motion">Motion Design</span><span>Adobe Creative Suite</span></li>
+        </ul>
+      </div>
+
+      <div class="about-block">
+        <h2 class="about-h2" data-i18n="about.contact">Contact</h2>
+        <ul class="about-list about-links">
+          <li><a href="mailto:lunachen019@gmail.com">Email<span>lunachen019@gmail.com</span></a></li>
+          <li><a href="https://www.linkedin.com/in/mingyuechen1214" target="_blank" rel="noopener">LinkedIn<span>/in/mingyuechen1214</span></a></li>
+          <li><a href="https://github.com/lunaaastudio" target="_blank" rel="noopener">GitHub<span>@lunaaastudio</span></a></li>
+        </ul>
+      </div>
     </section>
   </main>
 </BaseLayout>
