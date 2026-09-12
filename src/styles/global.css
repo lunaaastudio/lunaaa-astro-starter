@@ -178,9 +178,13 @@ html[lang=zh-CN] .hero-skills span{letter-spacing:.05em}
   background-size:cover;
   background-position:center 15%;
   background-repeat:no-repeat}
-.lab-a{background:#0b1226}
-.lab-b{background:#2563eb}
-.lab-c{background:#38bdf8}
+.lab-a,.lab-b,.lab-c{background:var(--blue)}
+#lab .thumb{display:flex;align-items:center;justify-content:center}
+.thumb-soon{
+  color:rgba(255,255,255,.72);font-size:11px;font-weight:500;
+  letter-spacing:.34em;text-transform:uppercase;padding-left:.34em
+}
+html[lang=zh-CN] .thumb-soon{letter-spacing:.3em;padding-left:.3em}
 
 #work .thumb,#library .thumb{position:relative;overflow:hidden}
 #work .thumb:after,#library .thumb:after{
