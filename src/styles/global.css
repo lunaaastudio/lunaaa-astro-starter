@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
 
 :root{
   --bg:#ffffff;
@@ -10,6 +10,7 @@
   --rule:rgba(3,4,94,.18);
   --serif:"Geist","Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
   --sans:"Geist","Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
+  --display:"Playfair Display","Noto Sans SC",Georgia,serif;
 }
 
 *{box-sizing:border-box}
@@ -125,7 +126,10 @@ nav a:hover:after{right:0}
 .section-block{border-top:1px solid var(--rule);padding:34px 0 84px}
 .section-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:34px}
 .section-head>h2{display:flex;align-items:baseline;gap:22px;margin:0;font-weight:400}
-.section-head>h2 span:first-child{font-size:15px;font-weight:700;letter-spacing:.2em;color:var(--blue)}
+.section-head>h2 span:first-child{
+  font-family:var(--display);font-style:italic;font-size:46px;font-weight:500;
+  letter-spacing:.04em;color:var(--blue);line-height:1
+}
 .section-head>h2 span:last-child{
   font-family:var(--serif);font-size:30px;font-weight:600;
   letter-spacing:.05em;color:var(--ink)
@@ -212,7 +216,6 @@ html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 html[lang=zh-CN] .hero h1,html[lang=zh-CN] .about-page h1,html[lang=zh-CN] .hero-full h1{line-height:1.18;letter-spacing:0}
 html[lang=zh-CN] .lede{line-height:1.75}
 html[lang=zh-CN] .eyebrow,html[lang=zh-CN] .text-link{letter-spacing:.12em}
-html[lang=zh-CN] .section-head>h2 span:first-child{letter-spacing:.1em}
 html[lang=zh-CN] .filter-btn,html[lang=zh-CN] .tag{letter-spacing:.06em}
 html[lang=zh-CN] .art-caption{letter-spacing:.16em}
 html[lang=zh-CN] .bio{line-height:1.85}
@@ -294,5 +297,6 @@ html[lang=zh-CN] .bio{line-height:1.85}
   .art-panel{height:320px}
   .section-block{padding-bottom:58px}
   .section-head>h2{gap:14px}
+  .section-head>h2 span:first-child{font-size:32px}
   .section-head>h2 span:last-child{font-size:22px}
 }
