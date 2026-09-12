@@ -109,6 +109,21 @@ const {
       document.getElementById("langToggle").addEventListener("click", () => {
         applyLang(document.documentElement.lang === "zh-CN" ? "en" : "zh");
       });
+
+      /* scroll reveal */
+      (function () {
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+        const targets = document.querySelectorAll(".section-head, .card-grid, .library-filters");
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.08 });
+        targets.forEach((el) => { el.classList.add("reveal"); io.observe(el); });
+      })();
     </script>
   </body>
 </html>
