@@ -251,6 +251,27 @@ html[lang=zh-CN] .bio{line-height:1.85}
 ::-webkit-scrollbar-thumb{background:rgba(3,4,94,.22);border-radius:999px;border:2px solid #fff}
 ::-webkit-scrollbar-thumb:hover{background:rgba(3,4,94,.4)}
 
+/* custom cursor: gradient blue circle */
+.cursor-ring{
+  position:fixed;top:0;left:0;z-index:9999;pointer-events:none;
+  width:46px;height:46px;border-radius:50%;
+  background:radial-gradient(circle at 36% 34%,rgba(144,224,239,.5),rgba(0,180,216,.32) 46%,rgba(3,4,94,.16) 74%,rgba(3,4,94,0) 100%);
+  border:1.5px solid rgba(0,119,182,.55);
+  opacity:0;transition:width .28s ease,height .28s ease,opacity .3s ease,border-color .28s ease
+}
+.cursor-ring.is-visible{opacity:1}
+.cursor-ring.is-hover{
+  width:78px;height:78px;
+  background:radial-gradient(circle at 36% 34%,rgba(144,224,239,.65),rgba(0,180,216,.42) 46%,rgba(3,4,94,.22) 74%,rgba(3,4,94,0) 100%);
+  border-color:rgba(0,180,216,.8)
+}
+@media (hover:hover) and (pointer:fine){
+  body,a,button,.work-card{cursor:none}
+}
+@media (hover:none),(pointer:coarse){
+  .cursor-ring{display:none}
+}
+
 @media (max-width:900px){
   .hero{grid-template-columns:1fr;gap:35px;padding-top:40px}
   .art-panel{height:380px}

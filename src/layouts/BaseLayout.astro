@@ -17,6 +17,7 @@ const {
     <title>{title}</title>
   </head>
   <body>
+    <div class="cursor-ring" aria-hidden="true"></div>
     <Header />
     <slot />
     <Footer />
@@ -123,6 +124,28 @@ const {
           });
         }, { threshold: 0.08 });
         targets.forEach((el) => { el.classList.add("reveal"); io.observe(el); });
+      })();
+
+      /* custom cursor: gradient blue circle */
+      (function () {
+        const ring = document.querySelector(".cursor-ring");
+        if (!ring || !window.matchMedia("(hover:hover) and (pointer:fine)").matches) return;
+        let x = innerWidth / 2, y = innerHeight / 2, tx = x, ty = y, shown = false;
+        addEventListener("mousemove", (e) => {
+          tx = e.clientX; ty = e.clientY;
+          if (!shown) { shown = true; ring.classList.add("is-visible"); x = tx; y = ty; }
+        });
+        addEventListener("mouseleave", () => ring.classList.remove("is-visible"));
+        addEventListener("mouseenter", () => { if (shown) ring.classList.add("is-visible"); });
+        (function loop() {
+          x += (tx - x) * 0.18; y += (ty - y) * 0.18;
+          ring.style.transform = "translate(" + x + "px," + y + "px) translate(-50%,-50%)";
+          requestAnimationFrame(loop);
+        })();
+        document.querySelectorAll("a, button").forEach((el) => {
+          el.addEventListener("mouseenter", () => ring.classList.add("is-hover"));
+          el.addEventListener("mouseleave", () => ring.classList.remove("is-hover"));
+        });
       })();
     </script>
   </body>
