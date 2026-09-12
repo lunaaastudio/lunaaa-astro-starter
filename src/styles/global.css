@@ -255,17 +255,19 @@ html[lang=zh-CN] .bio{line-height:1.85}
 ::-webkit-scrollbar-thumb{background:rgba(3,4,94,.22);border-radius:999px;border:2px solid #fff}
 ::-webkit-scrollbar-thumb:hover{background:rgba(3,4,94,.4)}
 
-/* custom cursor: solid blue circle */
+/* custom cursor: subtle blue circle, never blocks content */
 .cursor-ring{
   position:fixed;top:0;left:0;z-index:9999;pointer-events:none;
-  width:46px;height:46px;border-radius:50%;
-  background:rgba(0,180,216,.38);
-  opacity:0;transition:width .28s ease,height .28s ease,opacity .3s ease,background .28s ease
+  width:38px;height:38px;border-radius:50%;
+  background:rgba(0,180,216,.14);
+  border:1.5px solid rgba(0,180,216,.5);
+  opacity:0;transition:width .28s ease,height .28s ease,opacity .3s ease,background .28s ease,border-color .28s ease
 }
 .cursor-ring.is-visible{opacity:1}
 .cursor-ring.is-hover{
-  width:78px;height:78px;
-  background:rgba(0,180,216,.55)
+  width:64px;height:64px;
+  background:rgba(0,180,216,.1);
+  border-color:rgba(0,180,216,.85)
 }
 @media (hover:hover) and (pointer:fine){
   body,a,button,.work-card{cursor:none}
