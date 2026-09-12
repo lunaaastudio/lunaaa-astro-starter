@@ -59,8 +59,10 @@ nav a:hover:after{right:0}
 }
 .moon{
   position:absolute;width:116px;height:116px;border-radius:50%;
-  right:24%;top:22%;background:radial-gradient(circle at 40% 35%,#ffffff 0 9%,#caf0f8 55%,#90e0ef 100%);
-  opacity:.95;box-shadow:0 0 35px rgba(202,240,248,.4)
+  right:24%;top:22%;background:radial-gradient(circle at 40% 35%,#ffffff 0 9%,#eaf8fd 55%,#b8e6f5 100%);
+  -webkit-mask:radial-gradient(circle at 72% 30%,transparent 0 46%,#000 47%);
+  mask:radial-gradient(circle at 72% 30%,transparent 0 46%,#000 47%);
+  opacity:.95;filter:drop-shadow(0 0 18px rgba(202,240,248,.55))
 }
 .silhouette{
   position:absolute;bottom:0;left:46%;width:105px;height:200px;
