@@ -49,7 +49,7 @@ nav a:hover:after{right:0}
   height:430px;position:relative;overflow:hidden;background:
   linear-gradient(to bottom,#90e0ef 0%,#00b4d8 45%,#0077b6 72%,#03045e 100%);
 }
-.art-panel.has-image{background-size:cover;background-position:center}
+.art-panel.has-image{background-size:cover;background-position:center;background-repeat:no-repeat;background-color:var(--blue)}
 .art-panel.has-image:before{content:none}
 .art-panel:before{
   content:"";position:absolute;inset:auto -10% 28% -10%;height:30%;
@@ -73,7 +73,11 @@ nav a:hover:after{right:0}
 .silhouette:before{
   content:"";position:absolute;width:63px;height:63px;border-radius:50%;background:#03045e;top:-32px;left:20px
 }
-.art-caption{position:absolute;color:#eaf8fd;font-size:14px;line-height:1.6;letter-spacing:.16em;text-shadow:0 1px 10px rgba(3,4,94,.5)}
+.art-caption{
+  position:absolute;color:#ffffff;font-size:19px;font-weight:500;
+  line-height:1.65;letter-spacing:.18em;
+  text-shadow:0 2px 6px rgba(3,4,94,.55),0 4px 22px rgba(3,4,94,.45)
+}
 .art-caption.left{left:22px;top:144px}
 .art-caption.right{right:20px;bottom:24px;text-align:left}
 
