@@ -264,12 +264,22 @@ html[lang=zh-CN] .pill{letter-spacing:.05em}
   font-family:var(--serif);font-size:17px;font-weight:500
 }
 .about-list li span:last-child{font-family:var(--sans);font-size:13px;font-weight:400;color:var(--muted)}
-.about-links a{display:flex;justify-content:space-between;align-items:baseline;gap:24px;width:100%;transition:color .2s}
-.about-links li{padding:16px 0}
-.about-links a:hover{color:var(--blue)}
-.about-links a span{font-family:var(--sans);font-size:13px;font-weight:400;color:var(--muted)}
+
+/* compact two-column capabilities */
+.about-caps{display:grid;grid-template-columns:1fr 1fr;gap:2px 64px}
+.about-caps li{border-bottom:none;padding:9px 0;font-size:15px}
+.about-caps li span:last-child{font-size:12.5px}
+
+/* single-line contact links */
+.about-contact{display:flex;flex-wrap:wrap;gap:12px 32px;margin-top:6px}
+.about-contact a{
+  font-size:15px;font-weight:500;color:var(--ink);
+  border-bottom:1px solid rgba(37,99,235,.35);padding-bottom:2px;
+  transition:color .2s,border-color .2s
+}
+.about-contact a:hover{color:var(--blue);border-color:var(--blue)}
 @media (max-width:640px){
-  .about-list li{flex-direction:column;gap:4px}
+  .about-caps{grid-template-columns:1fr}
 }
 
 
