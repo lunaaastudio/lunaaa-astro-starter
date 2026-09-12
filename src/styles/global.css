@@ -15,9 +15,10 @@
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
+html,body{overflow-x:clip}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans)}
 a{color:inherit;text-decoration:none}
-.shell{width:min(1440px,calc(100% - 80px));margin-inline:auto}
+.shell{width:min(1680px,calc(100% - 64px));margin-inline:auto}
 
 .site-header{
   display:flex;align-items:center;justify-content:space-between;
@@ -73,7 +74,7 @@ nav a:hover:after{right:0}
   background:linear-gradient(100deg,rgba(3,4,94,.66) 0%,rgba(3,4,94,.38) 45%,rgba(3,4,94,.06) 78%)
 }
 .hero-full .hero-inner{
-  position:relative;width:min(1440px,calc(100% - 80px));margin-inline:auto;
+  position:relative;width:min(1680px,calc(100% - 64px));margin-inline:auto;
   padding:96px 0
 }
 .hero-full .hero-copy{max-width:600px}
