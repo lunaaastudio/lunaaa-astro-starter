@@ -3,9 +3,9 @@
 :root{
   --bg:#f7f9fc;
   --ink:#0b1226;
-  --blue:#1e88e5;
-  --cyan:#5cb8f0;
-  --ice:#d9eefb;
+  --blue:#1b90d6;
+  --cyan:#56c2e8;
+  --ice:#d8f0f9;
   --muted:rgba(11,18,38,.6);
   --rule:rgba(11,18,38,.14);
   --serif:"Geist","Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
@@ -20,7 +20,7 @@ body{
   margin:0;color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;
   background:
     radial-gradient(1100px 560px at 88% -8%,rgba(92,184,240,.12),transparent 60%),
-    radial-gradient(880px 520px at -12% 32%,rgba(30,136,229,.07),transparent 55%),
+    radial-gradient(880px 520px at -12% 32%,rgba(27,144,214,.07),transparent 55%),
     var(--bg)
 }
 
@@ -72,7 +72,7 @@ nav a:hover:after{right:0}
 
 .art-panel{
   height:430px;position:relative;overflow:hidden;background:
-  linear-gradient(to bottom,#d9eefb 0%,#5cb8f0 45%,#1e88e5 72%,#0b1226 100%);
+  linear-gradient(to bottom,#d8f0f9 0%,#56c2e8 45%,#1b90d6 72%,#0b1226 100%);
 }
 .art-panel.has-image{background-size:cover;background-position:center;background-repeat:no-repeat;background-color:var(--blue)}
 .art-panel.has-image:before{content:none}
@@ -108,7 +108,7 @@ nav a:hover:after{right:0}
 .hero-skills span{
   font-size:11px;font-weight:500;letter-spacing:.1em;
   padding:7px 16px 8px;border-radius:999px;
-  color:var(--blue);border:1px solid rgba(30,136,229,.35);
+  color:var(--blue);border:1px solid rgba(27,144,214,.35);
   background:rgba(255,255,255,.5);
   backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)
 }
@@ -123,9 +123,9 @@ html[lang=zh-CN] .hero-skills span{letter-spacing:.05em}
 .art-panel:before{
   content:"";position:absolute;inset:auto -10% 28% -10%;height:30%;
   background:
-  radial-gradient(ellipse at 25% 100%,#1e88e5 0 42%,transparent 43%),
+  radial-gradient(ellipse at 25% 100%,#1b90d6 0 42%,transparent 43%),
   radial-gradient(ellipse at 52% 100%,#0b1226 0 46%,transparent 47%),
-  radial-gradient(ellipse at 80% 100%,#5cb8f0 0 40%,transparent 41%);
+  radial-gradient(ellipse at 80% 100%,#56c2e8 0 40%,transparent 41%);
   opacity:.82
 }
 .moon{
@@ -175,7 +175,7 @@ html[lang=zh-CN] .hero-skills span{letter-spacing:.05em}
   background-position:center;
   background-repeat:no-repeat}
 .scene-b{background:
-  linear-gradient(110deg,#0b1226 0 32%,#1e88e5 33% 43%,#d9eefb 44% 60%,#5cb8f0 61%)}
+  linear-gradient(110deg,#0b1226 0 32%,#1b90d6 33% 43%,#d8f0f9 44% 60%,#56c2e8 61%)}
 .scene-c{
   background-color:#1a1a1a;
   background-size:cover;
@@ -205,7 +205,7 @@ html[lang=zh-CN] .thumb-soon{letter-spacing:.3em;padding-left:.3em}
   position:absolute;inset:0;
   display:flex;align-items:center;justify-content:center;
   padding:20px;text-align:center;
-  background:linear-gradient(rgba(11,18,38,.55),rgba(30,136,229,.85));
+  background:linear-gradient(rgba(11,18,38,.55),rgba(27,144,214,.85));
   color:#fff;font-family:var(--serif);font-size:24px;font-weight:500;letter-spacing:.02em;
   opacity:0;transition:opacity .28s ease
 }
@@ -220,13 +220,13 @@ html[lang=zh-CN] .thumb-soon{letter-spacing:.3em;padding-left:.3em}
 .card-meta{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-top:11px}
 .pill{
   display:inline-block;padding:5px 14px 6px;border-radius:999px;
-  background:rgba(30,136,229,.06);
-  border:1px solid rgba(30,136,229,.22);
+  background:rgba(27,144,214,.06);
+  border:1px solid rgba(27,144,214,.22);
   color:var(--blue);
   font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;
   transition:background .25s ease,border-color .25s ease
 }
-.work-card:hover .pill{background:rgba(30,136,229,.11);border-color:rgba(30,136,229,.4)}
+.work-card:hover .pill{background:rgba(27,144,214,.11);border-color:rgba(27,144,214,.4)}
 .card-meta .meta{font-size:12px;color:rgba(11,18,38,.45);letter-spacing:.05em}
 html[lang=zh-CN] .pill{letter-spacing:.05em}
 
@@ -245,7 +245,7 @@ html[lang=zh-CN] .pill{letter-spacing:.05em}
 .filter-btn.is-active{background:var(--blue);border-color:var(--blue);color:#fff}
 .tag{
   display:inline-block;margin-right:10px;padding:3px 11px 4px;
-  background:rgba(30,136,229,.06);border:1px solid rgba(30,136,229,.22);
+  background:rgba(27,144,214,.06);border:1px solid rgba(27,144,214,.22);
   color:var(--blue);border-radius:999px;
   font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;
   vertical-align:1px
@@ -285,7 +285,7 @@ html[lang=zh-CN] .pill{letter-spacing:.05em}
 .about-contact{display:flex;flex-wrap:wrap;gap:12px 32px;margin-top:6px}
 .about-contact a{
   font-size:15px;font-weight:500;color:var(--ink);
-  border-bottom:1px solid rgba(30,136,229,.35);padding-bottom:2px;
+  border-bottom:1px solid rgba(27,144,214,.35);padding-bottom:2px;
   transition:color .2s,border-color .2s
 }
 .about-contact a:hover{color:var(--blue);border-color:var(--blue)}
@@ -345,7 +345,7 @@ html[lang=zh-CN] .bio{line-height:1.85}
 .cursor-ring{
   position:fixed;top:0;left:0;z-index:9999;pointer-events:none;
   width:14px;height:14px;border-radius:50%;
-  background:rgba(30,136,229,.75);
+  background:rgba(27,144,214,.75);
   opacity:0;transition:width .22s ease,height .22s ease,opacity .3s ease,background .22s ease
 }
 .cursor-ring.is-visible{opacity:1}
