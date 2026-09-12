@@ -91,8 +91,11 @@ nav a:hover:after{right:0}
   background-repeat:no-repeat}
 .scene-b{background:
   linear-gradient(110deg,#03045e 0 32%,#0077b6 33% 43%,#90e0ef 44% 60%,#00b4d8 61%)}
-.scene-c{background:
-  linear-gradient(180deg,#0077b6,#90e0ef 53%,#03045e 54% 100%)}
+.scene-c{
+  background-color:#1a1a1a;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat}
 .scene-shelter{
   background-color:#5a189a;
   background-size:cover;
