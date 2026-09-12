@@ -20,5 +20,83 @@ const {
     <Header />
     <slot />
     <Footer />
+    <script is:inline>
+      const I18N = {
+        en: {
+          "nav.work": "Work", "nav.writing": "Writing", "nav.lab": "Lab", "nav.library": "Library", "nav.about": "About",
+          "hero.title": "Designer working across Games, AI & Human Experience.",
+          "hero.lede": "I design interactive experiences at the intersection of technology, play, and human behavior.",
+          "hero.explore": "<span></span> EXPLORE MY WORK →",
+          "hero.captionLeft": "Games<br>AI<br>Design<br>A more human future.",
+          "hero.captionRight": "PLAY<br>THINK<br>CREATE",
+          "sec.work": "SELECTED WORK", "sec.writing": "WRITING", "sec.lab": "LAB", "sec.library": "LIBRARY",
+          "sec.viewAll": "VIEW ALL →",
+          "work.wuthering.sub": "Game UX · Interaction Design · 2026",
+          "work.goobo.sub": "AI PM · UX Design · 2026",
+          "work.shelter.sub": "Narrative 2D Platformer · Steam · 2025",
+          "work.office.sub": "Environment Art · UE5 · 2024",
+          "writing.1.title": "Cheap Intelligence, Expensive Taste", "writing.1.tag": "AI / Design",
+          "writing.2.title": "What Happens When Game Characters Can Think?", "writing.2.tag": "AI / Games",
+          "writing.3.title": "From UX to Agent Experience", "writing.3.tag": "UX / AI",
+          "lab.1.title": "AI NPC Memory", "lab.2.title": "Generative Interfaces", "lab.3.title": "Game Prototypes",
+          "lab.sub": "EXPERIMENT · 2026",
+          "tag.all": "All", "tag.psychology": "Psychology", "tag.gamesProduction": "Games / Production", "tag.designSystems": "Design Systems",
+          "book.flow.bio": "The psychology classic on optimal experience — how deep, absorbed focus turns work and play into happiness.",
+          "book.playful.bio": "An Uncharted lead designer on shipping games without crunch — a playtest-driven process from first idea to launch.",
+          "book.atomic.bio": "The book that named design systems — atoms, molecules, organisms, and a shared language for building interfaces.",
+          "about.title": "Designer, artist, and creative technologist exploring games, AI, and human experience."
+        },
+        zh: {
+          "nav.work": "作品", "nav.writing": "写作", "nav.lab": "实验室", "nav.library": "书架", "nav.about": "关于",
+          "hero.title": "横跨游戏、AI 与人类体验的设计师。",
+          "hero.lede": "我设计交互体验，探索技术、玩乐与人类行为的交汇之处。",
+          "hero.explore": "<span></span> 查看我的作品 →",
+          "hero.captionLeft": "游戏<br>AI<br>设计<br>更人性的未来。",
+          "hero.captionRight": "玩乐<br>思考<br>创造",
+          "sec.work": "精选作品", "sec.writing": "写作", "sec.lab": "实验室", "sec.library": "书架",
+          "sec.viewAll": "查看全部 →",
+          "work.wuthering.sub": "游戏 UX · 交互设计 · 2026",
+          "work.goobo.sub": "AI 产品经理 · UX 设计 · 2026",
+          "work.shelter.sub": "叙事 2D 平台跳跃游戏 · Steam · 2025",
+          "work.office.sub": "环境美术 · UE5 · 2024",
+          "writing.1.title": "便宜的智能，昂贵的品味", "writing.1.tag": "AI / 设计",
+          "writing.2.title": "当游戏角色开始思考，会发生什么？", "writing.2.tag": "AI / 游戏",
+          "writing.3.title": "从 UX 到智能体体验", "writing.3.tag": "UX / AI",
+          "lab.1.title": "AI NPC 记忆", "lab.2.title": "生成式界面", "lab.3.title": "游戏原型",
+          "lab.sub": "实验 · 2026",
+          "tag.all": "全部", "tag.psychology": "心理学", "tag.gamesProduction": "游戏 / 制作", "tag.designSystems": "设计系统",
+          "book.flow.bio": "关于最优体验的心理学经典——深度专注如何让工作与玩乐都变成幸福。",
+          "book.playful.bio": "《神秘海域》主设计师讲述如何在不加班赶工的前提下交付游戏——以试玩驱动，从最初创意到最终上线。",
+          "book.atomic.bio": "为「设计系统」命名的书——原子、分子、组织体，以及一套构建界面的共同语言。",
+          "about.title": "设计师、艺术家、创意技术实践者，探索游戏、AI 与人类体验。"
+        }
+      };
+
+      function applyLang(lang) {
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const v = I18N[lang][el.dataset.i18n];
+          if (v != null) el.textContent = v;
+        });
+        document.querySelectorAll("[data-i18n-html]").forEach((el) => {
+          const v = I18N[lang][el.dataset.i18nHtml];
+          if (v != null) el.innerHTML = v;
+        });
+        document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+        const t = document.getElementById("langToggle");
+        if (t) t.textContent = lang === "zh" ? "EN" : "中文";
+        try { localStorage.setItem("lang", lang); } catch (e) {}
+      }
+
+      let initial = "en";
+      try {
+        initial = localStorage.getItem("lang") ||
+          (navigator.language && navigator.language.toLowerCase().startsWith("zh") ? "zh" : "en");
+      } catch (e) {}
+      applyLang(initial);
+
+      document.getElementById("langToggle").addEventListener("click", () => {
+        applyLang(document.documentElement.lang === "zh-CN" ? "en" : "zh");
+      });
+    </script>
   </body>
 </html>

@@ -8,22 +8,22 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <div class="hero-inner">
         <div class="hero-copy">
           <p class="eyebrow">LUNA CHEN · 2026</p>
-          <h1>Designer working across Games, AI & Human Experience.</h1>
-          <p class="lede">
+          <h1 data-i18n="hero.title">Designer working across Games, AI & Human Experience.</h1>
+          <p class="lede" data-i18n="hero.lede">
             I design interactive experiences at the intersection of
             technology, play, and human behavior.
           </p>
-          <a class="text-link" href="#work"><span></span> EXPLORE MY WORK →</a>
+          <a class="text-link" href="#work" data-i18n-html="hero.explore"><span></span> EXPLORE MY WORK →</a>
         </div>
       </div>
-      <div class="art-caption left">Games<br>AI<br>Design<br>A more human future.</div>
-      <div class="art-caption right">PLAY<br>THINK<br>CREATE</div>
+      <div class="art-caption left" data-i18n-html="hero.captionLeft">Games<br>AI<br>Design<br>A more human future.</div>
+      <div class="art-caption right" data-i18n-html="hero.captionRight">PLAY<br>THINK<br>CREATE</div>
     </section>
 
     <section id="work" class="section-block">
       <div class="section-head">
-        <div><span>01</span><span>SELECTED WORK</span></div>
-        <a href="#">VIEW ALL →</a>
+        <div><span>01</span><span data-i18n="sec.work">SELECTED WORK</span></div>
+        <a href="#" data-i18n="sec.viewAll">VIEW ALL →</a>
       </div>
 
       <div class="card-grid">
@@ -31,7 +31,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <a href="https://wutheringwaves.kurogames.com/" target="_blank" rel="noopener">
             <div class="thumb scene-a" data-title="Wuthering Waves" style="background-image:url('/wuthering-waves.jpg')"></div>
             <div class="card-line"><span>01</span><h2>Wuthering Waves</h2><span>→</span></div>
-            <p>Game UX · Interaction Design · 2026</p>
+            <p data-i18n="work.wuthering.sub">Game UX · Interaction Design · 2026</p>
           </a>
         </article>
 
@@ -39,7 +39,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <a href="https://goobo.ai/" target="_blank" rel="noopener">
             <div class="thumb scene-goobo" data-title="Goobo — AI Ita Bag" style="background-image:url('/goobo.jpg')"></div>
             <div class="card-line"><span>02</span><h2>Goobo — AI Ita Bag</h2><span>→</span></div>
-            <p>AI PM · UX Design · 2026</p>
+            <p data-i18n="work.goobo.sub">AI PM · UX Design · 2026</p>
           </a>
         </article>
 
@@ -47,7 +47,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <a href="https://store.steampowered.com/app/3583320/The_Little_Shelter/" target="_blank" rel="noopener">
             <div class="thumb scene-shelter" data-title="The Little Shelter" style="background-image:url('/the-little-shelter.jpg')"></div>
             <div class="card-line"><span>03</span><h2>The Little Shelter</h2><span>→</span></div>
-            <p>Narrative 2D Platformer · Steam · 2025</p>
+            <p data-i18n="work.shelter.sub">Narrative 2D Platformer · Steam · 2025</p>
           </a>
         </article>
 
@@ -55,7 +55,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <a href="https://www.artstation.com/artwork/YB1dGb" target="_blank" rel="noopener">
             <div class="thumb scene-c" data-title="Abandon Office" style="background-image:url('/abandon-office.jpg')"></div>
             <div class="card-line"><span>04</span><h2>Abandon Office</h2><span>→</span></div>
-            <p>Environment Art · UE5 · 2024</p>
+            <p data-i18n="work.office.sub">Environment Art · UE5 · 2024</p>
           </a>
         </article>
       </div>
@@ -63,55 +63,55 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
     <section id="writing" class="section-block">
       <div class="section-head">
-        <div><span>02</span><span>WRITING</span></div>
-        <a href="#">VIEW ALL →</a>
+        <div><span>02</span><span data-i18n="sec.writing">WRITING</span></div>
+        <a href="#" data-i18n="sec.viewAll">VIEW ALL →</a>
       </div>
 
       <div class="writing-list">
-        <a href="#"><span>SEP 08, 2026</span><h2>Cheap Intelligence, Expensive Taste</h2><span>AI / Design</span><b>→</b></a>
-        <a href="#"><span>AUG 21, 2026</span><h2>What Happens When Game Characters Can Think?</h2><span>AI / Games</span><b>→</b></a>
-        <a href="#"><span>JUL 17, 2026</span><h2>From UX to Agent Experience</h2><span>UX / AI</span><b>→</b></a>
+        <a href="#"><span>SEP 08, 2026</span><h2 data-i18n="writing.1.title">Cheap Intelligence, Expensive Taste</h2><span data-i18n="writing.1.tag">AI / Design</span><b>→</b></a>
+        <a href="#"><span>AUG 21, 2026</span><h2 data-i18n="writing.2.title">What Happens When Game Characters Can Think?</h2><span data-i18n="writing.2.tag">AI / Games</span><b>→</b></a>
+        <a href="#"><span>JUL 17, 2026</span><h2 data-i18n="writing.3.title">From UX to Agent Experience</h2><span data-i18n="writing.3.tag">UX / AI</span><b>→</b></a>
       </div>
     </section>
 
     <section id="lab" class="section-block">
       <div class="section-head">
-        <div><span>03</span><span>LAB</span></div>
-        <a href="#">VIEW ALL →</a>
+        <div><span>03</span><span data-i18n="sec.lab">LAB</span></div>
+        <a href="#" data-i18n="sec.viewAll">VIEW ALL →</a>
       </div>
 
       <div class="card-grid">
         <article class="work-card">
           <div class="thumb lab-a"></div>
-          <div class="card-line"><h2>AI NPC Memory</h2><span>→</span></div>
-          <p>EXPERIMENT · 2026</p>
+          <div class="card-line"><h2 data-i18n="lab.1.title">AI NPC Memory</h2><span>→</span></div>
+          <p data-i18n="lab.sub">EXPERIMENT · 2026</p>
         </article>
 
         <article class="work-card">
           <div class="thumb lab-b"></div>
-          <div class="card-line"><h2>Generative Interfaces</h2><span>→</span></div>
-          <p>EXPERIMENT · 2026</p>
+          <div class="card-line"><h2 data-i18n="lab.2.title">Generative Interfaces</h2><span>→</span></div>
+          <p data-i18n="lab.sub">EXPERIMENT · 2026</p>
         </article>
 
         <article class="work-card">
           <div class="thumb lab-c"></div>
-          <div class="card-line"><h2>Game Prototypes</h2><span>→</span></div>
-          <p>EXPERIMENT · 2026</p>
+          <div class="card-line"><h2 data-i18n="lab.3.title">Game Prototypes</h2><span>→</span></div>
+          <p data-i18n="lab.sub">EXPERIMENT · 2026</p>
         </article>
       </div>
     </section>
 
     <section id="library" class="section-block">
       <div class="section-head">
-        <div><span>04</span><span>LIBRARY</span></div>
-        <a href="#">VIEW ALL →</a>
+        <div><span>04</span><span data-i18n="sec.library">LIBRARY</span></div>
+        <a href="#" data-i18n="sec.viewAll">VIEW ALL →</a>
       </div>
 
       <div class="library-filters" role="group" aria-label="Filter books by tag">
-        <button class="filter-btn is-active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="psychology">Psychology</button>
-        <button class="filter-btn" data-filter="games-production">Games / Production</button>
-        <button class="filter-btn" data-filter="design-systems">Design Systems</button>
+        <button class="filter-btn is-active" data-filter="all" data-i18n="tag.all">All</button>
+        <button class="filter-btn" data-filter="psychology" data-i18n="tag.psychology">Psychology</button>
+        <button class="filter-btn" data-filter="games-production" data-i18n="tag.gamesProduction">Games / Production</button>
+        <button class="filter-btn" data-filter="design-systems" data-i18n="tag.designSystems">Design Systems</button>
       </div>
 
       <div class="card-grid">
@@ -119,8 +119,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <a href="https://www.amazon.com/dp/0061339202" target="_blank" rel="noopener">
             <div class="thumb lib-cover" data-title="Flow" style="background-image:url('/library-flow.jpg')"></div>
             <div class="card-line"><span>01</span><h2>Flow</h2><span>→</span></div>
-            <p>Mihaly Csikszentmihalyi <span class="tag">Psychology</span></p>
-            <p class="bio">The psychology classic on optimal experience — how deep, absorbed focus turns work and play into happiness.</p>
+            <p>Mihaly Csikszentmihalyi <span class="tag" data-i18n="tag.psychology">Psychology</span></p>
+            <p class="bio" data-i18n="book.flow.bio">The psychology classic on optimal experience — how deep, absorbed focus turns work and play into happiness.</p>
           </a>
         </article>
 
@@ -128,8 +128,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <a href="https://www.playfulproductionprocess.com/" target="_blank" rel="noopener">
             <div class="thumb lib-cover" data-title="A Playful Production Process" style="background-image:url('/library-playful-production.jpg')"></div>
             <div class="card-line"><span>02</span><h2>A Playful Production Process</h2><span>→</span></div>
-            <p>Richard Lemarchand <span class="tag">Games / Production</span></p>
-            <p class="bio">An Uncharted lead designer on shipping games without crunch — a playtest-driven process from first idea to launch.</p>
+            <p>Richard Lemarchand <span class="tag" data-i18n="tag.gamesProduction">Games / Production</span></p>
+            <p class="bio" data-i18n="book.playful.bio">An Uncharted lead designer on shipping games without crunch — a playtest-driven process from first idea to launch.</p>
           </a>
         </article>
 
@@ -137,8 +137,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <a href="https://atomicdesign.bradfrost.com/" target="_blank" rel="noopener">
             <div class="thumb lib-cover" data-title="Atomic Design" style="background-image:url('/library-atomic-design.jpg')"></div>
             <div class="card-line"><span>03</span><h2>Atomic Design</h2><span>→</span></div>
-            <p>Brad Frost <span class="tag">Design Systems</span></p>
-            <p class="bio">The book that named design systems — atoms, molecules, organisms, and a shared language for building interfaces.</p>
+            <p>Brad Frost <span class="tag" data-i18n="tag.designSystems">Design Systems</span></p>
+            <p class="bio" data-i18n="book.atomic.bio">The book that named design systems — atoms, molecules, organisms, and a shared language for building interfaces.</p>
           </a>
         </article>
       </div>

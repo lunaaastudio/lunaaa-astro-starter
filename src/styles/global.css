@@ -8,8 +8,8 @@
   --ice:#90e0ef;
   --muted:rgba(3,4,94,.6);
   --rule:rgba(3,4,94,.18);
-  --serif:"Geist", Arial, sans-serif;
-  --sans:"Geist", Arial, sans-serif;
+  --serif:"Geist","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
+  --sans:"Geist","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
 }
 
 *{box-sizing:border-box}
@@ -23,7 +23,13 @@ a{color:inherit;text-decoration:none}
   padding:28px 0;font-size:14px
 }
 .brand{font-weight:500;letter-spacing:.16em}
-nav{display:flex;gap:36px}
+nav{display:flex;gap:36px;align-items:center}
+.lang-toggle{
+  font:inherit;font-size:11px;letter-spacing:.1em;cursor:pointer;
+  border:1px solid var(--rule);border-radius:999px;background:transparent;
+  color:var(--muted);padding:4px 13px;transition:all .2s ease
+}
+.lang-toggle:hover{border-color:var(--blue);color:var(--blue)}
 nav a{position:relative}
 nav a:after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:1px;background:var(--blue);transition:.2s}
 nav a:hover{color:var(--blue)}
