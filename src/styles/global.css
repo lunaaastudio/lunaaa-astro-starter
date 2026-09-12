@@ -21,8 +21,12 @@ a{color:inherit;text-decoration:none}
 .shell{width:min(1680px,calc(100% - 64px));margin-inline:auto}
 
 .site-header{
+  width:100%;
+  font-size:14px
+}
+.header-inner{
   display:flex;align-items:center;justify-content:space-between;
-  padding:28px 0;font-size:14px
+  padding:28px 0
 }
 .brand{font-weight:500;letter-spacing:.16em}
 nav{display:flex;gap:36px;align-items:center}
@@ -307,7 +311,7 @@ html[lang=zh-CN] .bio{line-height:1.85}
 @media (max-width:640px){
   .shell{width:calc(100% - 34px)}
   .card-grid{grid-template-columns:1fr}
-  .site-header{padding:20px 0}
+  .header-inner{padding:20px 0}
   nav{gap:16px;font-size:12px}
   .hero{min-height:auto;padding:70px 0}
   .hero-full{min-height:76vh;padding:0}
