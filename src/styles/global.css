@@ -91,6 +91,15 @@ nav a:hover:after{right:0}
 .section-block{scroll-margin-top:32px}
 .hero-full .text-link{color:#fff}
 .hero-full .text-link span{background:#fff}
+.hero-skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:38px}
+.hero-skills span{
+  font-size:11px;font-weight:500;letter-spacing:.1em;
+  padding:7px 16px 8px;border-radius:999px;
+  color:#fff;border:1px solid rgba(255,255,255,.42);
+  background:rgba(255,255,255,.14);
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)
+}
+html[lang=zh-CN] .hero-skills span{letter-spacing:.05em}
 .hero-full .art-caption{
   position:absolute;z-index:2;bottom:30px;
   font-size:13px;font-weight:400;letter-spacing:.22em;line-height:1.5;
