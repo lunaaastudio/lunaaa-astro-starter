@@ -80,7 +80,7 @@ nav a:hover:after{right:0}
 /* full-bleed hero: image as section-wide background */
 .hero-full{
   width:100vw;margin-left:calc(50% - 50vw);
-  min-height:66vh;display:flex;align-items:center;
+  min-height:46vh;display:flex;align-items:center;
   position:relative;
   background-size:cover;background-position:center;background-repeat:no-repeat;
   background-color:var(--blue);
@@ -88,7 +88,7 @@ nav a:hover:after{right:0}
 }
 .hero-full:before{
   content:"";position:absolute;inset:0;
-  background:linear-gradient(100deg,rgba(247,249,252,.55) 0%,rgba(247,249,252,.16) 45%,rgba(247,249,252,0) 78%)
+  background:linear-gradient(100deg,rgba(247,249,252,.38) 0%,rgba(247,249,252,.10) 42%,rgba(247,249,252,0) 70%)
 }
 .hero-full .hero-inner{
   position:relative;width:min(1680px,calc(100% - 64px));margin-inline:auto;
@@ -375,7 +375,7 @@ html[lang=zh-CN] .bio{line-height:1.85}
   .header-inner{padding:20px 0}
   nav{gap:16px;font-size:12px}
   .hero{min-height:auto;padding:70px 0}
-  .hero-full{min-height:68vh;padding:0}
+  .hero-full{min-height:50vh;padding:0}
   .hero-full .hero-inner{padding:56px 0}
   .hero-full .art-caption{font-size:11px;letter-spacing:.14em}
   .hero-full .art-caption.right{top:24px;bottom:auto}
