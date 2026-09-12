@@ -84,9 +84,11 @@ nav a:hover:after{right:0}
 
 .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .thumb{aspect-ratio:1.72/1;margin-bottom:15px;background:var(--ice)}
-.scene-a{background:
-  linear-gradient(180deg,rgba(255,255,255,.12),rgba(3,4,94,.04)),
-  linear-gradient(150deg,#caf0f8 0 45%,#00b4d8 46% 57%,#90e0ef 58%)}
+.scene-a{
+  background-color:#0a1a3a;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat}
 .scene-b{background:
   linear-gradient(110deg,#03045e 0 32%,#0077b6 33% 43%,#90e0ef 44% 60%,#00b4d8 61%)}
 .scene-c{background:
