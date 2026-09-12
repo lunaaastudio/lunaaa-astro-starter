@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500;600&display=swap');
 
 :root{
   --bg:#ffffff;
@@ -8,8 +8,8 @@
   --ice:#90e0ef;
   --muted:rgba(3,4,94,.6);
   --rule:rgba(3,4,94,.18);
-  --serif:"Geist","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
-  --sans:"Geist","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
+  --serif:"Geist","Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
+  --sans:"Geist","Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
 }
 
 *{box-sizing:border-box}
