@@ -77,11 +77,15 @@ nav a:hover:after{right:0}
 .art-caption.left{left:22px;top:144px}
 .art-caption.right{right:20px;bottom:24px;text-align:left}
 
-.section-block{border-top:1px solid var(--rule);padding:26px 0 84px}
-.section-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
-.section-head>div{display:flex;gap:44px}
-.section-head span,.section-head a{font-size:10px;letter-spacing:.28em;color:var(--muted)}
-.section-head a{letter-spacing:.18em;color:var(--ink)}
+.section-block{border-top:1px solid var(--rule);padding:34px 0 84px}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:34px}
+.section-head>div{display:flex;align-items:baseline;gap:22px}
+.section-head>div span:first-child{font-size:11px;letter-spacing:.28em;color:var(--muted)}
+.section-head>div span:last-child{
+  font-family:var(--serif);font-size:30px;font-weight:600;
+  letter-spacing:.05em;color:var(--ink)
+}
+.section-head a{font-size:10px;letter-spacing:.18em;color:var(--muted)}
 .section-head a:hover{color:var(--blue)}
 
 .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -168,5 +172,6 @@ nav a:hover:after{right:0}
   .lede{font-size:17px}
   .art-panel{height:320px}
   .section-block{padding-bottom:58px}
-  .section-head>div{gap:20px}
+  .section-head>div{gap:14px}
+  .section-head>div span:last-child{font-size:22px}
 }
