@@ -195,12 +195,16 @@ html[lang=zh-CN] .hero-skills span{letter-spacing:.05em}
 .lab-b,.lab-c{background:var(--blue)}
 .lab-paige{
   position:relative;
-  background-color:#f2c3d5;
-  background-image:url('/project-paige.jpg');
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat
+  background-color:#f2c3d5
 }
+.lab-paige:before{
+  content:"";position:absolute;inset:0;
+  background-image:url('/project-paige.jpg');
+  background-size:cover;background-position:center 0%;background-repeat:no-repeat;
+  transform-origin:50% 0;
+  transition:transform .6s cubic-bezier(.22,1,.36,1)
+}
+.work-card:hover .lab-paige:before{transform:scale(1.06)}
 #lab .thumb{display:flex;align-items:center;justify-content:center}
 .thumb-soon{
   color:rgba(255,255,255,.72);font-size:11px;font-weight:500;
