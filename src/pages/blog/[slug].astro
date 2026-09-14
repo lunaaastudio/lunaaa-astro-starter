@@ -1,0 +1,77 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { blogPosts } from "../../data/blog";
+
+export function getStaticPaths() {
+  return blogPosts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+
+// Minimal markdown → HTML (headings, paragraphs, bold/italic, lists).
+function renderMarkdown(md: string): string {
+  const lines = md.replace(/\r\n/g, "\n").split("\n");
+  const out: string[] = [];
+  let list: "ul" | "ol" | null = null;
+
+  const inline = (s: string) =>
+    s
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+      .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+      .replace(/\*(.+?)\*/g, "<em>$1</em>")
+      .replace(/`(.+?)`/g, "<code>$1</code>");
+
+  const closeList = () => {
+    if (list) { out.push(`</${list}>`); list = null; }
+  };
+
+  for (const raw of lines) {
+    const line = raw.trimEnd();
+    if (!line.trim()) { closeList(); continue; }
+
+    const h = line.match(/^(#{1,4})\s+(.*)$/);
+    if (h) {
+      closeList();
+      const level = h[1].length;
+      out.push(`<h${level}>${inline(h[2])}</h${level}>`);
+      continue;
+    }
+
+    const ul = line.match(/^[-*]\s+(.*)$/);
+    if (ul) {
+      if (list !== "ul") { closeList(); out.push("<ul>"); list = "ul"; }
+      out.push(`<li>${inline(ul[1])}</li>`);
+      continue;
+    }
+
+    const ol = line.match(/^\d+[.)]\s+(.*)$/);
+    if (ol) {
+      if (list !== "ol") { closeList(); out.push("<ol>"); list = "ol"; }
+      out.push(`<li>${inline(ol[1])}</li>`);
+      continue;
+    }
+
+    closeList();
+    out.push(`<p>${inline(line)}</p>`);
+  }
+  closeList();
+  return out.join("\n");
+}
+
+const html = renderMarkdown(post.content || "");
+---
+
+<BaseLayout title={`${post.title} — lunaaastudio`}>
+  <main class="shell">
+    <article class="blog-article">
+      <a class="text-link back" href="/#blog"><span></span> ← BACK TO BLOG</a>
+      <time class="blog-date" datetime={post.date}>{post.dateLabel}</time>
+      <h1 class="blog-article-title">{post.title}</h1>
+      <p class="blog-article-excerpt">{post.excerpt}</p>
+      <div class="blog-article-body" set:html={html} />
+    </article>
+  </main>
+</BaseLayout>
