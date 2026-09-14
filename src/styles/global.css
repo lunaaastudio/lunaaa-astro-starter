@@ -247,6 +247,14 @@ html[lang=zh-CN] .thumb-soon{letter-spacing:.3em;padding-left:.3em}
   transition:background .25s ease,border-color .25s ease
 }
 .work-card:hover .pill{background:rgba(27,144,214,.11);border-color:rgba(27,144,214,.4)}
+.pill-lang{
+  background:rgba(34,168,118,.07);border-color:rgba(34,168,118,.28);color:#1f9d6b
+}
+.work-card:hover .pill-lang{background:rgba(34,168,118,.13);border-color:rgba(34,168,118,.45)}
+.pill-status{
+  background:rgba(232,150,44,.08);border-color:rgba(232,150,44,.3);color:#c07a16
+}
+.work-card:hover .pill-status{background:rgba(232,150,44,.14);border-color:rgba(232,150,44,.5)}
 .card-meta .meta{font-size:12px;color:rgba(11,18,38,.45);letter-spacing:.05em}
 html[lang=zh-CN] .pill{letter-spacing:.05em}
 
