@@ -291,21 +291,22 @@ html[lang=zh-CN] .pill{letter-spacing:.05em}
 .blog-list{display:flex;flex-direction:column;border-top:1px solid var(--rule)}
 .blog-post{border-bottom:1px solid var(--rule)}
 .blog-link{
-  display:grid;grid-template-columns:130px 1fr auto;
-  align-items:baseline;gap:24px;padding:26px 8px;
+  display:grid;grid-template-columns:130px minmax(0,1.2fr) minmax(0,2fr) auto;
+  align-items:baseline;gap:28px;padding:26px 8px;
   transition:padding .3s cubic-bezier(.22,1,.36,1),background .3s ease
 }
 .blog-link:hover{background:var(--ice);padding-left:18px}
 .blog-date{
   font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.12em;
-  text-transform:uppercase;color:var(--muted)
+  text-transform:uppercase;color:var(--muted);white-space:nowrap
 }
-.blog-title{font-family:var(--serif);font-size:22px;font-weight:500;margin:0;color:var(--ink)}
+.blog-title{font-family:var(--serif);font-size:22px;font-weight:500;margin:0;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .blog-excerpt{font-size:14px;line-height:1.7;color:rgba(11,18,38,.6);margin:0;letter-spacing:.01em}
-.blog-more{font-family:var(--serif);font-size:22px;color:var(--blue);transition:transform .3s ease}
+.blog-more{font-family:var(--serif);font-size:22px;color:var(--blue);transition:transform .3s ease;justify-self:end}
 .blog-link:hover .blog-more{transform:translateX(4px)}
 @media (max-width:640px){
   .blog-link{grid-template-columns:1fr;gap:8px;padding:20px 8px}
+  .blog-title{white-space:normal}
   .blog-more{display:none}
 }
 
