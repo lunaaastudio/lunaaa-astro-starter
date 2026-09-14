@@ -13,11 +13,19 @@ export interface BlogPost {
   title: string;
   excerpt: string;
   content: string; // markdown body
-  coverImage: string; // data URL (base64) or absolute URL
+  coverImage: string; // cover image path (e.g. "/blog-covers/x.jpg") or URL
   date: string; // ISO date, e.g. "2026-09-01"
   dateLabel: string; // display label, e.g. "01 Sep 2026"
 }
 
 export const blogPosts: BlogPost[] = [
-
+  {
+    slug: "designing-game-interfaces-across-pc-console-mobile",
+    title: "Designing Game Interfaces Across PC, Console & Mobile",
+    excerpt: "Designing game interfaces across PC, console, and mobile is not simply a matter of adapting screen sizes. Each platform introduces different input methods, interaction patterns, viewing distances, and player expectations. This article explores how UI and interaction design should adapt across mouse and keyboard, controller, and touch—from information hierarchy and navigation to input feedback and accessibility—while maintaining a consistent gameplay experience across platforms.",
+    content: "Placeholder here",
+    coverImage: "",
+    date: "2026-09-14",
+    dateLabel: "14 Sep 2026",
+  },
 ];
