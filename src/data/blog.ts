@@ -13,6 +13,7 @@ export interface BlogPost {
   title: string;
   excerpt: string;
   content: string; // markdown body
+  coverImage: string; // data URL (base64) or absolute URL
   date: string; // ISO date, e.g. "2026-09-01"
   dateLabel: string; // display label, e.g. "01 Sep 2026"
 }
