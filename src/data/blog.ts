@@ -24,7 +24,7 @@ export const blogPosts: BlogPost[] = [
     title: "Designing Game Interfaces Across PC, Console & Mobile",
     excerpt: "Designing game interfaces across PC, console, and mobile is not simply a matter of adapting screen sizes. Each platform introduces different input methods, interaction patterns, viewing distances, and player expectations. This article explores how UI and interaction design should adapt across mouse and keyboard, controller, and touch—from information hierarchy and navigation to input feedback and accessibility—while maintaining a consistent gameplay experience across platforms.",
     content: "Placeholder here",
-    coverImage: "",
+    coverImage: "/blog-covers/designing-game-interfaces-across-pc-console-mobile.jpg",
     date: "2026-09-14",
     dateLabel: "14 Sep 2026",
   },
