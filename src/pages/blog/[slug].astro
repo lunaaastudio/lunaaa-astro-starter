@@ -70,6 +70,9 @@ const html = renderMarkdown(post.content || "");
       <a class="text-link back" href="/#blog"><span></span> ← BACK TO BLOG</a>
       <time class="blog-date" datetime={post.date}>{post.dateLabel}</time>
       <h1 class="blog-article-title">{post.title}</h1>
+      {post.coverImage && (
+        <img class="blog-article-cover" src={post.coverImage} alt={post.title} />
+      )}
       <p class="blog-article-excerpt">{post.excerpt}</p>
       <div class="blog-article-body" set:html={html} />
     </article>
