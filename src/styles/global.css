@@ -328,6 +328,7 @@ html[lang=zh-CN] .pill{letter-spacing:.05em}
 .blog-article-cover{width:100%;max-height:420px;object-fit:cover;border-radius:14px;margin:0 0 28px;border:1px solid var(--rule)}
 .blog-article-excerpt{font-size:18px;line-height:1.7;color:rgba(11,18,38,.62);margin:0 0 40px}
 .blog-article-body{font-size:16px;line-height:1.85;color:rgba(11,18,38,.82)}
+.blog-article-body .blog-inline-img{display:block;max-width:100%;height:auto;border-radius:12px;margin:24px auto;border:1px solid var(--rule)}
 .blog-article-body h2{font-family:var(--serif);font-size:26px;font-weight:500;margin:44px 0 14px;color:var(--ink)}
 .blog-article-body h3{font-size:20px;font-weight:600;margin:34px 0 12px;color:var(--ink)}
 .blog-article-body p{margin:0 0 18px}
