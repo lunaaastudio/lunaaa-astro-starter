@@ -178,7 +178,11 @@ import { blogPosts } from "../data/blog";
                 <time class="blog-date" datetime={post.date}>{post.dateLabel}</time>
                 <h3 class="blog-title" data-i18n={`blog.${post.slug}.title`}>{post.title}</h3>
                 <p class="blog-excerpt" data-i18n={`blog.${post.slug}.excerpt`}>{post.excerpt}</p>
-                <span class="blog-more">→</span>
+                {post.coverImage ? (
+                  <img class="blog-thumb" src={post.coverImage} alt="" loading="lazy" />
+                ) : (
+                  <span class="blog-more">→</span>
+                )}
               </a>
             </article>
           ))}
