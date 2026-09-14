@@ -304,6 +304,7 @@ html[lang=zh-CN] .pill{letter-spacing:.05em}
 .blog-excerpt{font-size:14px;line-height:1.7;color:rgba(11,18,38,.6);margin:0;letter-spacing:.01em}
 .blog-more{font-family:var(--serif);font-size:22px;color:var(--blue);transition:transform .3s ease;justify-self:end}
 .blog-link:hover .blog-more{transform:translateX(4px)}
+.blog-thumb{width:80px;height:52px;object-fit:cover;border-radius:8px;border:1px solid var(--rule);justify-self:end;align-self:center}
 @media (max-width:640px){
   .blog-link{grid-template-columns:1fr;gap:8px;padding:20px 8px}
   .blog-title{white-space:normal}
@@ -315,6 +316,7 @@ html[lang=zh-CN] .pill{letter-spacing:.05em}
 .blog-article .back{display:inline-block;margin-bottom:34px}
 .blog-article .blog-date{display:block;margin-bottom:18px}
 .blog-article-title{font-family:var(--serif);font-size:clamp(32px,4.4vw,50px);font-weight:500;line-height:1.12;letter-spacing:-.02em;margin:0 0 20px}
+.blog-article-cover{width:100%;max-height:420px;object-fit:cover;border-radius:14px;margin:0 0 28px;border:1px solid var(--rule)}
 .blog-article-excerpt{font-size:18px;line-height:1.7;color:rgba(11,18,38,.62);margin:0 0 40px}
 .blog-article-body{font-size:16px;line-height:1.85;color:rgba(11,18,38,.82)}
 .blog-article-body h2{font-family:var(--serif);font-size:26px;font-weight:500;margin:44px 0 14px;color:var(--ink)}
