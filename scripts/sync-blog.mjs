@@ -65,6 +65,7 @@ const posts = readPosts()
     title: p.title || "Untitled",
     excerpt: p.excerpt || "",
     content: p.content || "",
+    coverImage: p.cover_image || "",
     date: (p.created_at || p.date || "").slice(0, 10),
     dateLabel: dateLabel(p.created_at || p.date),
   }));
@@ -75,6 +76,7 @@ const lines = posts.map(
     title: "${esc(p.title)}",
     excerpt: "${esc(p.excerpt)}",
     content: "${esc(p.content)}",
+    coverImage: "${esc(p.coverImage)}",
     date: "${esc(p.date)}",
     dateLabel: "${esc(p.dateLabel)}",
   },`
@@ -95,6 +97,7 @@ export interface BlogPost {
   title: string;
   excerpt: string;
   content: string; // markdown body
+  coverImage: string; // data URL (base64) or absolute URL
   date: string; // ISO date, e.g. "2026-09-01"
   dateLabel: string; // display label, e.g. "01 Sep 2026"
 }
