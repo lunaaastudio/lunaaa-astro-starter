@@ -165,23 +165,25 @@ import { blogPosts } from "../data/blog";
       </script>
     </section>
 
-    <section id="blog" class="section-block">
-      <div class="section-head">
-        <h2><span>04</span><span data-i18n="sec.blog">BLOG</span></h2>
-      </div>
+    {blogPosts.length > 0 && (
+      <section id="blog" class="section-block">
+        <div class="section-head">
+          <h2><span>04</span><span data-i18n="sec.blog">BLOG</span></h2>
+        </div>
 
-      <div class="blog-list">
-        {blogPosts.map((post) => (
-          <article class="blog-post">
-            <a href={`/blog/${post.slug}`} class="blog-link">
-              <time class="blog-date" datetime={post.date}>{post.dateLabel}</time>
-              <h3 class="blog-title" data-i18n={`blog.${post.slug}.title`}>{post.title}</h3>
-              <p class="blog-excerpt" data-i18n={`blog.${post.slug}.excerpt`}>{post.excerpt}</p>
-              <span class="blog-more">→</span>
-            </a>
-          </article>
-        ))}
-      </div>
-    </section>
+        <div class="blog-list">
+          {blogPosts.map((post) => (
+            <article class="blog-post">
+              <a href={`/blog/${post.slug}`} class="blog-link">
+                <time class="blog-date" datetime={post.date}>{post.dateLabel}</time>
+                <h3 class="blog-title" data-i18n={`blog.${post.slug}.title`}>{post.title}</h3>
+                <p class="blog-excerpt" data-i18n={`blog.${post.slug}.excerpt`}>{post.excerpt}</p>
+                <span class="blog-more">→</span>
+              </a>
+            </article>
+          ))}
+        </div>
+      </section>
+    )}
   </main>
 </BaseLayout>

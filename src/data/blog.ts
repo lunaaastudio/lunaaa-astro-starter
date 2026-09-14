@@ -18,28 +18,5 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
-  {
-    slug: "designing-for-ai",
-    title: "Designing for AI: interfaces that feel human",
-    excerpt: "How to design conversational and generative experiences that stay playful, clear, and human — lessons from building AI products.",
-    content: "## Start with intent, not output\n\nGenerative interfaces fail when they dump a wall of output at the user. Good AI design starts from what the person is trying to do and shapes the interaction around that intent.\n\n## Keep it conversational\n\nTreat the model as a collaborator, not a vending machine. Design feedback loops that let people steer, correct, and iterate — not one-shot prompts.\n\n## Make the machine legible\n\nShow confidence, cite sources, and let people see *why* the system answered the way it did. Trust is a design problem.",
-    date: "2026-09-01",
-    dateLabel: "01 Sep 2026",
-  },
-  {
-    slug: "game-ux-the-invisible-craft",
-    title: "Game UX: the invisible craft",
-    excerpt: "What good game UX looks like — readability, feedback loops, and the interface that players never notice because it just works.",
-    content: "## Readability first\n\nIn a fast moment-to-moment game, the UI has milliseconds to communicate. Hierarchy, contrast, and restraint matter more than decoration.\n\n## Feedback loops\n\nEvery player action needs a response. The best feedback is diegetic — baked into the world itself — so it never feels like an interruption.\n\n## The interface that disappears\n\nThe highest praise a game UI can earn is that players never noticed it was there. When it just works, it vanishes.",
-    date: "2026-08-18",
-    dateLabel: "18 Aug 2026",
-  },
-  {
-    slug: "from-maya-to-unreal",
-    title: "From Maya to Unreal: an environment art workflow",
-    excerpt: "A walkthrough of my 3D pipeline — blocking out in Maya, texturing in Substance, and lighting for mood in Unreal Engine 5.",
-    content: "## Block out in Maya\n\nStart with simple primitives to nail scale and silhouette before committing to any detail. A good blockout saves hours later.\n\n## Texture in Substance\n\nLayer materials for wear and variation — flat surfaces read as fake. The story of an asset lives in its imperfections.\n\n## Light for mood in Unreal\n\nLighting is where the scene gets its feeling. Set the emotional tone first, then let the assets support it.",
-    date: "2026-07-30",
-    dateLabel: "30 Jul 2026",
-  },
+
 ];
