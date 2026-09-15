@@ -85,18 +85,6 @@ import { blogPosts } from "../data/blog";
             </p>
           </a>
         </article>
-
-        <article class="work-card">
-          <div class="thumb lab-b"><span class="thumb-soon" data-i18n="lab.upcoming">UPCOMING</span></div>
-          <div class="card-line"><h3 data-i18n="lab.2.title">Generative Interfaces</h3></div>
-          <p class="card-meta"><span class="meta">2026</span></p>
-        </article>
-
-        <article class="work-card">
-          <div class="thumb lab-c"><span class="thumb-soon" data-i18n="lab.upcoming">UPCOMING</span></div>
-          <div class="card-line"><h3 data-i18n="lab.3.title">Game Prototypes</h3></div>
-          <p class="card-meta"><span class="meta">2026</span></p>
-        </article>
       </div>
     </section>
 
@@ -178,7 +166,11 @@ import { blogPosts } from "../data/blog";
                 <time class="blog-date" datetime={post.date}>{post.dateLabel}</time>
                 <h3 class="blog-title" data-i18n={`blog.${post.slug}.title`}>{post.title}</h3>
                 <p class="blog-excerpt" data-i18n={`blog.${post.slug}.excerpt`}>{post.excerpt}</p>
-                <span class="blog-more">→</span>
+                {post.coverImage ? (
+                  <img class="blog-thumb" src={post.coverImage} alt="" loading="lazy" />
+                ) : (
+                  <span class="blog-more">→</span>
+                )}
               </a>
             </article>
           ))}

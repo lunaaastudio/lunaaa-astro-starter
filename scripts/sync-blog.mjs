@@ -14,12 +14,62 @@
 //   node scripts/sync-blog.mjs < posts.json
 //   node scripts/sync-blog.mjs posts.json
 
-import { readFileSync, writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, existsSync, rmSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const OUT = join(__dirname, "..", "src", "data", "blog.ts");
+const ROOT = join(__dirname, "..");
+const OUT = join(ROOT, "src", "data", "blog.ts");
+const COVER_DIR = join(ROOT, "public", "blog-covers");
+const IMG_DIR = join(ROOT, "public", "blog-images");
+
+// 把 base64 data URL 解码存成静态文件，返回路径引用（/blog-covers/<slug>.<ext>）。
+// 普通 URL 原样返回；空值返回 ""。
+function persistCover(slug, cover) {
+  if (!cover) return "";
+  if (!String(cover).startsWith("data:")) return cover; // 已是普通 URL
+  const m = String(cover).match(/^data:image\/(png|jpeg|jpg|gif|webp);base64,(.+)$/s);
+  if (!m) return cover; // 无法识别的 data URL，原样保留
+  const ext = m[1] === "jpeg" ? "jpg" : m[1];
+  const filename = `${slug}.${ext}`;
+  const buf = Buffer.from(m[2], "base64");
+  mkdirSync(COVER_DIR, { recursive: true });
+  writeFileSync(join(COVER_DIR, filename), buf);
+  return `/blog-covers/${filename}`;
+}
+
+// 清空旧的封面目录，避免残留已删除文章的图片
+if (existsSync(COVER_DIR)) rmSync(COVER_DIR, { recursive: true, force: true });
+if (existsSync(IMG_DIR)) rmSync(IMG_DIR, { recursive: true, force: true });
+
+// 扫描正文 content 里的 data URL 图片（形如 ![alt](data:image/...;base64,...) 或裸 data URL），
+// 解码落盘到 public/blog-images/<slug>-<n>.<ext>，并把原 data URL 替换成静态路径。
+function persistInlineImages(slug, content) {
+  if (!content) return content;
+  let n = 0;
+  // 匹配 markdown 图片语法里的 data URL：![alt](data:...)
+  const reMd = /(!\[[^\]]*\]\()data:(image\/(?:png|jpeg|jpg|gif|webp));base64,([A-Za-z0-9+/=]+)(\))/g;
+  content = content.replace(reMd, (m, pre, mime, b64, post) => {
+    n += 1;
+    const ext = mime === "jpeg" ? "jpg" : mime;
+    const filename = `${slug}-${n}.${ext}`;
+    mkdirSync(IMG_DIR, { recursive: true });
+    writeFileSync(join(IMG_DIR, filename), Buffer.from(b64, "base64"));
+    return `${pre}/blog-images/${filename}${post}`;
+  });
+  // 匹配裸 data URL（非 markdown 包裹）
+  const reRaw = /data:(image\/(?:png|jpeg|jpg|gif|webp));base64,([A-Za-z0-9+/=]+)/g;
+  content = content.replace(reRaw, (m, mime, b64) => {
+    n += 1;
+    const ext = mime === "jpeg" ? "jpg" : mime;
+    const filename = `${slug}-${n}.${ext}`;
+    mkdirSync(IMG_DIR, { recursive: true });
+    writeFileSync(join(IMG_DIR, filename), Buffer.from(b64, "base64"));
+    return `/blog-images/${filename}`;
+  });
+  return content;
+}
 
 function readPosts() {
   let raw;
@@ -60,14 +110,18 @@ function esc(s) {
 const posts = readPosts()
   .filter((p) => p.published !== false)
   .sort((a, b) => new Date(b.created_at || b.date) - new Date(a.created_at || a.date))
-  .map((p) => ({
-    slug: p.slug || slugify(p.title),
-    title: p.title || "Untitled",
-    excerpt: p.excerpt || "",
-    content: p.content || "",
-    date: (p.created_at || p.date || "").slice(0, 10),
-    dateLabel: dateLabel(p.created_at || p.date),
-  }));
+  .map((p) => {
+    const slug = p.slug || slugify(p.title);
+    return {
+      slug,
+      title: p.title || "Untitled",
+      excerpt: p.excerpt || "",
+      content: persistInlineImages(slug, p.content || ""),
+      coverImage: persistCover(slug, p.cover_image || ""),
+      date: (p.created_at || p.date || "").slice(0, 10),
+      dateLabel: dateLabel(p.created_at || p.date),
+    };
+  });
 
 const lines = posts.map(
   (p) => `  {
@@ -75,6 +129,7 @@ const lines = posts.map(
     title: "${esc(p.title)}",
     excerpt: "${esc(p.excerpt)}",
     content: "${esc(p.content)}",
+    coverImage: "${esc(p.coverImage)}",
     date: "${esc(p.date)}",
     dateLabel: "${esc(p.dateLabel)}",
   },`
@@ -95,6 +150,7 @@ export interface BlogPost {
   title: string;
   excerpt: string;
   content: string; // markdown body
+  coverImage: string; // cover image path (e.g. "/blog-covers/x.jpg") or URL
   date: string; // ISO date, e.g. "2026-09-01"
   dateLabel: string; // display label, e.g. "01 Sep 2026"
 }

@@ -20,6 +20,7 @@ function renderMarkdown(md: string): string {
   const inline = (s: string) =>
     s
       .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+      .replace(/!\[([^\]]*)\]\(([^)\s]+)\)/g, '<img class="blog-inline-img" src="$2" alt="$1" loading="lazy" />')
       .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
       .replace(/\*(.+?)\*/g, "<em>$1</em>")
       .replace(/`(.+?)`/g, "<code>$1</code>");
@@ -70,6 +71,9 @@ const html = renderMarkdown(post.content || "");
       <a class="text-link back" href="/#blog"><span></span> ← BACK TO BLOG</a>
       <time class="blog-date" datetime={post.date}>{post.dateLabel}</time>
       <h1 class="blog-article-title">{post.title}</h1>
+      {post.coverImage && (
+        <img class="blog-article-cover" src={post.coverImage} alt={post.title} />
+      )}
       <p class="blog-article-excerpt">{post.excerpt}</p>
       <div class="blog-article-body" set:html={html} />
     </article>

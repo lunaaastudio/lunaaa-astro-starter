@@ -13,10 +13,28 @@ export interface BlogPost {
   title: string;
   excerpt: string;
   content: string; // markdown body
+  coverImage: string; // cover image path (e.g. "/blog-covers/x.jpg") or URL
   date: string; // ISO date, e.g. "2026-09-01"
   dateLabel: string; // display label, e.g. "01 Sep 2026"
 }
 
 export const blogPosts: BlogPost[] = [
-
+  {
+    slug: "does-ai-change-how-we-value-games",
+    title: "Does AI Change How We Value Games?",
+    excerpt: "https://www.gcores.com/radios/215851 Thoughts after listening to this podcast from Gcores.",
+    content: "I don’t think I would feel offended simply because a game I love was made with AI.\n\nTo me, using AI to improve production efficiency—or even building an AI-native workflow—is becoming an inevitable direction for the creative industry. Games have always been made through evolving tools, and I’m interested in how AI can reduce repetitive work and give creators more space to experiment, prototype, and iterate.\n\nAt the same time, as a trained artist, I deeply value human labor, craftsmanship, and authorship. There is something meaningful about knowing that an artist spent years developing their visual language, taste, and sensitivity, and that these experiences eventually became part of the work I’m experiencing.\n\nSo for me, the question is not simply whether AI was used. It is what role AI played, what role humans played, and where the creative intention came from.\n\nI’m comfortable with AI as a tool, collaborator, or even an integral part of an AI-native creative pipeline. But I would be more skeptical if efficiency became the only goal, or if AI were used to replace human creative labor without respecting the people, knowledge, and artistic traditions that made those outputs possible.",
+    coverImage: "/blog-covers/does-ai-change-how-we-value-games.jpg",
+    date: "2026-09-15",
+    dateLabel: "15 Sep 2026",
+  },
+  {
+    slug: "designing-game-interfaces-across-pc-console-mobile",
+    title: "Designing Game Interfaces Across PC, Console & Mobile",
+    excerpt: "Designing game interfaces across PC, console, and mobile is not simply a matter of adapting screen sizes. Each platform introduces different input methods, interaction patterns, viewing distances, and player expectations. This article explores how UI and interaction design should adapt across mouse and keyboard, controller, and touch—from information hierarchy and navigation to input feedback and accessibility—while maintaining a consistent gameplay experience across platforms.",
+    content: "Placeholder here",
+    coverImage: "/blog-covers/designing-game-interfaces-across-pc-console-mobile.jpg",
+    date: "2026-09-14",
+    dateLabel: "14 Sep 2026",
+  },
 ];
