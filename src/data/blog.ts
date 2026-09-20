@@ -20,6 +20,15 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "游戏-ai-机器人技术方案演进-从脚本到大模型",
+    title: "游戏 AI 机器人技术方案演进：从脚本到大模型",
+    excerpt: "在和机器人初创沟通后对AI x 游戏 x 具身 有了一些新的想法",
+    content: "https://zhuanlan.zhihu.com/p/2068431113656209951",
+    coverImage: "",
+    date: "2026-09-20",
+    dateLabel: "20 Sep 2026",
+  },
+  {
     slug: "does-ai-change-how-we-value-games",
     title: "Does AI Change How We Value Games?",
     excerpt: "https://www.gcores.com/radios/215851 Thoughts after listening to this podcast from Gcores.",
