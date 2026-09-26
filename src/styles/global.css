@@ -337,12 +337,12 @@ html[lang=zh-CN] .pill{letter-spacing:.05em}
 .blog-article-body strong{color:var(--ink);font-weight:600}
 
 
-.about-page{min-height:75vh;padding:70px 0 90px;max-width:860px}
+.about-page{min-height:75vh;padding:70px 0 90px;max-width:1040px}
 /* hero: two-column intro — identity left, story right */
 .about-hero{display:grid;grid-template-columns:250px 1fr;gap:52px;align-items:start}
 .about-hero-left .about-avatar{margin:0 0 20px}
 .about-hero-left .about-role{font-size:15px;line-height:1.55}
-.about-hero .about-headline{font-size:clamp(28px,3.6vw,38px);margin:4px 0 0}
+.about-hero .about-headline{font-size:clamp(28px,3.8vw,40px);margin:4px 0 0}
 .about-hero .about-bio{margin-top:24px}
 .about-hero .about-bio p{font-size:16px}
 @media (max-width:760px){
