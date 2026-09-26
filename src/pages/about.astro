@@ -12,8 +12,102 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <p data-i18n="about.p2">I care about how technology feels: playful, clear, and human. Right now I'm exploring how AI changes the way we design, build, and play.</p>
       </div>
 
+      <div class="about-divider" role="presentation" aria-hidden="true"></div>
+
       <div class="about-block">
-        <h2 class="about-h2" data-i18n="about.capabilities">Capabilities</h2>
+        <p class="about-practice-label" data-i18n="about.practice">Creative Practice</p>
+        <h2 class="about-h2" data-i18n="about.exhibitions">Selected Exhibitions</h2>
+        <ul class="about-list about-timeline">
+          <li class="is-solo">
+            <span class="tl-item" data-i18n="exh.solo.2023.title">The Land of Nothingness</span>
+            <span class="tl-meta"><em>Solo · 2023</em> · :iidrr Gallery, New York, USA</span>
+          </li>
+          <li><span class="tl-item" data-i18n="exh.group.2025.title">Intersecting Realities</span><span class="tl-meta"><em>2025</em> · The Holy Art Gallery, Paris, France</span></li>
+          <li><span class="tl-item" data-i18n="exh.group.2024-09.title">A Year of Magical Thinking</span><span class="tl-meta"><em>2024</em> · Leerform, New York, USA</span></li>
+          <li><span class="tl-item" data-i18n="exh.group.2024-06.title">The Nature of Home: Taking Root in a Place</span><span class="tl-meta"><em>2024</em> · A Space Gallery, New York, USA</span></li>
+          <li><span class="tl-item" data-i18n="exh.group.2023-04.title">Useless Machines</span><span class="tl-meta"><em>2023</em> · TheBlanc Gallery, New York, USA</span></li>
+          <li><span class="tl-item" data-i18n="exh.group.2022-12.title">Die Ausstellung</span><span class="tl-meta"><em>2022</em> · Berlin, Germany</span></li>
+          <li><span class="tl-item" data-i18n="exh.group.2022-09.title">This Is Not a Drill</span><span class="tl-meta"><em>2022</em> · NYU Bobst Library, New York, USA</span></li>
+        </ul>
+      </div>
+
+      <div class="about-block">
+        <h2 class="about-h2" data-i18n="about.press">Selected Press</h2>
+        <ul class="about-list about-timeline">
+          <li>
+            <span class="tl-outlet">VoyageLA</span>
+            <span class="tl-item" data-i18n="press.2025-04.title">Meet Mingyue Chen of Los Angeles</span>
+            <span class="tl-meta"><em>2025</em></span>
+          </li>
+          <li>
+            <span class="tl-outlet">China Daily · Gamersky · Vogue Chinese · Artron</span>
+            <span class="tl-item" data-i18n="press.2024-04.title">Lunaaa.Studio: From Brooklyn to Guangzhou — An Adventure of Game and Art</span>
+            <span class="tl-meta"><em>2024</em></span>
+          </li>
+          <li>
+            <span class="tl-outlet">:IIDRR.Space</span>
+            <span class="tl-item" data-i18n="press.2024-07-iidrr.title">Interview with Mingyue Luna Chen</span>
+            <span class="tl-meta"><em>2024</em></span>
+          </li>
+          <li>
+            <span class="tl-outlet">Shanghai Science and Technology Innovation · Wen Wei Po</span>
+            <span class="tl-item" data-i18n="press.2024-07-shanghai.title">Can Small and Exquisite Indie Games Light the Way Forward?</span>
+            <span class="tl-meta"><em>2024</em></span>
+          </li>
+          <li>
+            <span class="tl-outlet">Marie Claire China · Meer · Artron · ArtRabbit · NYU Tisch</span>
+            <span class="tl-item" data-i18n="press.2023-08.title">The Land of Nothingness</span>
+            <span class="tl-meta"><em>2023</em></span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="about-block">
+        <h2 class="about-h2" data-i18n="about.events">Selected Shows & Events</h2>
+        <ul class="about-list about-timeline">
+          <li>
+            <span class="tl-item" data-i18n="evt.2024-01.title">Sino-American Game Developer & Entrepreneurs Summit</span>
+            <span class="tl-meta"><em>2024</em> · Indie Game Section — Los Angeles</span>
+          </li>
+          <li>
+            <span class="tl-item" data-i18n="evt.2024-12.title">Beings In Progress</span>
+            <span class="tl-meta"><em>2024</em> · UCLA Media Arts Sci-Fi Cohort Showcase — Los Angeles</span>
+          </li>
+          <li>
+            <span class="tl-item" data-i18n="evt.2024-10.title">Game Show?!</span>
+            <span class="tl-meta"><em>2024</em> · Experimental Game Design, CalArts — Los Angeles</span>
+          </li>
+          <li>
+            <span class="tl-item" data-i18n="evt.2024-07.title">China Cartoon Game Expo</span>
+            <span class="tl-meta"><em>2024</em> · Indie Game Section — Shanghai</span>
+          </li>
+          <li>
+            <span class="tl-item" data-i18n="evt.2024-06.title">inG Game Art Festival</span>
+            <span class="tl-meta"><em>2024</em> · Indie Game Section — Guangzhou</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="about-block">
+        <h2 class="about-h2" data-i18n="about.publish">Publications & Recognition</h2>
+        <ul class="about-list about-timeline">
+          <li>
+            <span class="tl-item" data-i18n="pub.2025-01.title">Future Star Magazine, Issue 5</span>
+            <span class="tl-meta"><em>2025</em> · The Holy Art Gallery</span>
+          </li>
+          <li>
+            <span class="tl-item" data-i18n="pub.2022-11.title">Selected Poster Presenter — Climate Citizen Track</span>
+            <span class="tl-meta"><em>2022</em> · Cumulus Detroit · Team Rising</span>
+          </li>
+          <li>
+            <span class="tl-item" data-i18n="pub.2022-02.title">First-Place Winner — Health & Wellness Track</span>
+            <span class="tl-meta"><em>2022</em> · Hack NYU · Team Easy Allergy</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="about-block">
+        <h2 class="about-h2" data-i18n="about.capabilities">Skills / Tools</h2>
         <ul class="about-list about-caps">
           <li><span data-i18n="skill.ux">UX Design</span><span>Figma · Adobe Illustrator</span></li>
           <li><span data-i18n="skill.game">Game Design</span><span>Unity · Unreal Engine</span></li>
@@ -25,61 +119,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       </div>
 
       <div class="about-block">
-        <h2 class="about-h2" data-i18n="about.press">Media & Press</h2>
-        <ul class="about-list about-timeline">
-          <li><span class="tl-item" data-i18n="press.2025-04.title">Meet Mingyue Chen of Los Angeles</span><span class="tl-meta"><em>Apr 2025</em> · VoyageLA</span></li>
-          <li><span class="tl-item" data-i18n="press.2024-07-iidrr.title">iidrr Interview with Mingyue Luna Chen</span><span class="tl-meta"><em>Jul 2024</em> · :IIDRR.Space</span></li>
-          <li><span class="tl-item" data-i18n="press.2024-07-shanghai.title">Can small and exquisite indie games light the way forward?</span><span class="tl-meta"><em>Jul 2024</em> · Shanghai Science and Technology Innovation, Wen Wei Po</span></li>
-          <li><span class="tl-item" data-i18n="press.2024-06.title">Art Show — The Nature of Home: Taking Root in a Place, Group Show</span><span class="tl-meta"><em>Jun 2024</em> · Li Tang, ArtRabbit, ArtForum</span></li>
-          <li><span class="tl-item" data-i18n="press.2024-04.title">Lunaaa.Studio: From Brooklyn to Guangzhou — An Adventure of Game and Art</span><span class="tl-meta"><em>Apr 2024</em> · China Daily, Gamersky, Vogue Chinese Front Page, Artron.net</span></li>
-          <li><span class="tl-item" data-i18n="press.2023-08.title">The First Solo Exhibition in New York by Millenial Artist Mingyue Chen: The Land of Nothingness</span><span class="tl-meta"><em>Aug 2023</em> · Marie Claire China, Artron.net, Meer, ArtRabbit, NYU Tisch ITP/IMA</span></li>
-          <li><span class="tl-item" data-i18n="press.2022-09.title">This Is Not A Drill* Exhibition — Team Rising, Tisch Creative Research Fellowship</span><span class="tl-meta"><em>Sept 2022</em> · NYU Tisch, Academicgates</span></li>
-        </ul>
-      </div>
-
-      <div class="about-block">
-        <h2 class="about-h2" data-i18n="about.publish">Publishing & Award</h2>
-        <ul class="about-list about-timeline">
-          <li><span class="tl-item" data-i18n="pub.2025-01.title">Future Star Magazine, Issue 5 — The Holly Art Gallery</span><span class="tl-meta"><em>Jan 2025</em> · Distributed in Amsterdam, Milan and London</span></li>
-          <li><span class="tl-item" data-i18n="pub.2022-11.title">Selected Poster Presenter in Climate Citizen Track, Cumulus Detroit 2022</span><span class="tl-meta"><em>Nov 2022</em> · Team Rising · Detroit, USA</span></li>
-          <li><span class="tl-item" data-i18n="pub.2022-02.title">First-Place Winner in Health & Wellness Track, Hack NYU 2022</span><span class="tl-meta"><em>Feb 2022</em> · Team Easy Allergy · New York, USA</span></li>
-        </ul>
-      </div>
-
-      <div class="about-block">
-        <h2 class="about-h2" data-i18n="about.events">Lunaaa Studio Events</h2>
-        <ul class="about-list about-timeline">
-          <li><span class="tl-item" data-i18n="evt.2024-12.title">"Beings In Progress" — UCLA Media Art Sci-Fi Cohort Showcase</span><span class="tl-meta"><em>Dec 2024</em> · Human Resources LA, Los Angeles, USA</span></li>
-          <li><span class="tl-item" data-i18n="evt.2024-10.title">"Game Show?!" — Experimental Game Design</span><span class="tl-meta"><em>Oct 2024</em> · Black & White Gallery, California Institute of the Arts, Los Angeles, USA</span></li>
-          <li><span class="tl-item" data-i18n="evt.2024-09.title">Leerform Fabrication | Design</span><span class="tl-meta"><em>Sept 2024</em> · Bushwick Open Studio, Ridgewood, New York, USA</span></li>
-          <li><span class="tl-item" data-i18n="evt.2024-07.title">China Cartoon Game Expo — Indie Game Section</span><span class="tl-meta"><em>Jul 2024</em> · Shanghai Exhibition Center, Shanghai, CN</span></li>
-          <li><span class="tl-item" data-i18n="evt.2024-06.title">inG Game Art Festival — Indie Game Section</span><span class="tl-meta"><em>Jun 2024</em> · Guangzhou Game Museum, Guangzhou, CN</span></li>
-          <li><span class="tl-item" data-i18n="evt.2024-05.title">Wuhoo Art Market</span><span class="tl-meta"><em>May 2024</em> · Gulangyu Art Academy, Gulangyu Island, CN</span></li>
-          <li><span class="tl-item" data-i18n="evt.2024-03.title">Guangzhou Art Fair "Paper Game"</span><span class="tl-meta"><em>Mar 2024</em> · Suo · Xieying Art Museum, Guangzhou, CN</span></li>
-          <li><span class="tl-item" data-i18n="evt.2024-01.title">Sino-American Game Developer & Entrepreneurs Summit — Indie Game Section</span><span class="tl-meta"><em>Jan 2024</em> · Sheraton Los Angeles San Gabriel, Los Angeles, USA</span></li>
-          <li><span class="tl-item" data-i18n="evt.2023-04.title">Asian Artist Activities Hub Design Fair</span><span class="tl-meta"><em>Apr 2023</em> · SoHo, New York, USA</span></li>
-        </ul>
-      </div>
-
-      <div class="about-block">
-        <h2 class="about-h2" data-i18n="about.exhibitions">Art Exhibitions</h2>
-        <h3 class="about-h3" data-i18n="about.solo">Solo Exhibition</h3>
-        <ul class="about-list about-timeline">
-          <li><span class="tl-item" data-i18n="exh.solo.2023.title">The Land of Nothingness</span><span class="tl-meta"><em>Aug 2023</em> · :iidrr Gallery, New York, USA</span></li>
-        </ul>
-        <h3 class="about-h3" data-i18n="about.group">Group Exhibition</h3>
-        <ul class="about-list about-timeline">
-          <li><span class="tl-item" data-i18n="exh.group.2025.title">Intersecting Realities</span><span class="tl-meta"><em>Feb 2025</em> · The Holy Art Gallery, Paris, France</span></li>
-          <li><span class="tl-item" data-i18n="exh.group.2024-09.title">A Year of Magical Thinking</span><span class="tl-meta"><em>Sept 2024</em> · Leerform, New York, USA</span></li>
-          <li><span class="tl-item" data-i18n="exh.group.2024-06.title">The Nature of Home: Taking Root in a Place</span><span class="tl-meta"><em>Jun 2024</em> · A Space Gallery, New York, USA</span></li>
-          <li><span class="tl-item" data-i18n="exh.group.2023-11.title">Falling Leaves from Babel</span><span class="tl-meta"><em>Nov 2023</em> · 16 Waverly Ave, New York, USA</span></li>
-          <li><span class="tl-item" data-i18n="exh.group.2023-08.title">3-Year Anniversary Pinup Exhibition</span><span class="tl-meta"><em>Aug 2023</em> · :iidrr Gallery, New York, USA</span></li>
-          <li><span class="tl-item" data-i18n="exh.group.2023-07-epilogue.title">Epilogue</span><span class="tl-meta"><em>Jul 2023</em> · Pilot + Projects, Philadelphia, USA</span></li>
-          <li><span class="tl-item" data-i18n="exh.group.2023-07-4x6.title">4" X 6"</span><span class="tl-meta"><em>Jul 2023</em> · PTM Contemporary Gallery, New York, USA</span></li>
-          <li><span class="tl-item" data-i18n="exh.group.2023-04.title">Useless Machines</span><span class="tl-meta"><em>Apr 2023</em> · TheBlanc Gallery, New York, USA</span></li>
-          <li><span class="tl-item" data-i18n="exh.group.2022-12.title">Die Ausstellung</span><span class="tl-meta"><em>Dec 2022</em> · Alexandrinenstraße 118, Berlin, Germany</span></li>
-          <li><span class="tl-item" data-i18n="exh.group.2022-09.title">This Is Not a Drill</span><span class="tl-meta"><em>Sept 2022</em> · Bobst Library, New York University, New York, USA</span></li>
-        </ul>
+        <h2 class="about-h2" data-i18n="about.now">Currently Exploring</h2>
+        <div class="about-now">
+          <a href="/#lab"><span data-i18n="now.lab">AI Lab</span><span data-i18n="now.lab.desc">Experiments in AI-native interaction</span><span>→</span></a>
+          <a href="/#blog"><span data-i18n="now.blog">Blog</span><span data-i18n="now.blog.desc">Writing about games, AI & design</span><span>→</span></a>
+          <a href="/#library"><span data-i18n="now.library">Library</span><span data-i18n="now.library.desc">Books and ideas shaping my practice</span><span>→</span></a>
+          <a href="/calendar"><span data-i18n="now.calendar">Calendar</span><span data-i18n="now.calendar.desc">Conferences, events & exhibitions I'm attending</span><span>→</span></a>
+        </div>
       </div>
 
       <div class="about-block">
