@@ -384,8 +384,45 @@ html[lang=zh-CN] .pill{letter-spacing:.05em}
   font-family:var(--serif);font-size:15px;font-weight:600;color:var(--ink);
   margin:22px 0 0;padding-bottom:6px;border-bottom:1px solid var(--rule)
 }
+
+/* creative practice divider + label */
+.about-divider{
+  height:1px;background:var(--rule);margin:56px 0 0;border:0
+}
+.about-practice-label{
+  font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--muted);margin:0 0 18px
+}
+
+/* solo exhibition emphasis */
+.about-timeline li.is-solo{
+  background:var(--ice);border:1px solid rgba(27,144,214,.18);
+  border-radius:12px;padding:16px 18px;margin-bottom:8px
+}
+.about-timeline li.is-solo .tl-item{font-size:17px}
+.about-timeline li.is-solo .tl-meta em{color:var(--blue);font-weight:700}
+
+/* press outlet row */
+.tl-outlet{
+  font-family:var(--sans);font-size:11.5px;font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--blue);margin-bottom:2px
+}
+
+/* currently exploring link cards */
+.about-now{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+.about-now a{
+  display:flex;flex-direction:column;gap:3px;
+  background:var(--ice);border:1px solid transparent;border-radius:12px;
+  padding:16px 18px;transition:border-color .2s,transform .2s
+}
+.about-now a:hover{border-color:rgba(27,144,214,.4);transform:translateY(-2px)}
+.about-now a span:first-child{font-family:var(--serif);font-size:16px;font-weight:600;color:var(--ink)}
+.about-now a span:nth-child(2){font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+.about-now a span:last-child{font-family:var(--sans);font-size:14px;color:var(--blue);margin-top:6px}
+
 @media (max-width:640px){
   .about-caps{grid-template-columns:1fr}
+  .about-now{grid-template-columns:1fr}
 }
 
 
