@@ -83,14 +83,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <h2 class="about-h2" data-i18n="about.practice">Creative Practice</h2>
 
         <div class="about-filters" id="practiceFilters">
-          <button class="filter-btn is-active" data-filter="all" data-i18n="filter.all">All</button>
-          <button class="filter-btn" data-filter="exhibitions" data-i18n="filter.exhibitions">Art Exhibitions</button>
+          <button class="filter-btn is-active" data-filter="exhibitions" data-i18n="filter.exhibitions">Art Exhibitions</button>
           <button class="filter-btn" data-filter="shows" data-i18n="filter.shows">Game & Media Shows</button>
           <button class="filter-btn" data-filter="press" data-i18n="filter.press">Press</button>
           <button class="filter-btn" data-filter="recognition" data-i18n="filter.recognition">Recognition</button>
         </div>
 
-        <div class="about-fgroup" data-section="exhibitions">
+        <div class="about-fgroup is-active" data-section="exhibitions">
         <h3 class="about-h3" data-i18n="about.exhibitions">Selected Art Exhibitions</h3>
         <ul class="about-list about-timeline">
           <li class="is-solo">
@@ -199,7 +198,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         if (!btn || !bar.contains(btn)) return;
         bar.querySelectorAll(".filter-btn").forEach((b) => b.classList.toggle("is-active", b === btn));
         const f = btn.dataset.filter;
-        groups.forEach((g) => { g.style.display = (f === "all" || g.dataset.section === f) ? "" : "none"; });
+        groups.forEach((g) => g.classList.toggle("is-active", g.dataset.section === f));
       });
     }
   </script>
