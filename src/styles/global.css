@@ -435,13 +435,11 @@ html[lang=zh-CN] .pill{letter-spacing:.05em}
   text-transform:uppercase;color:var(--muted);margin:0 0 18px
 }
 
-/* card entries (solo emphasis + game & media shows) */
-.about-timeline li.is-card,
+/* solo emphasis (exhibitions) */
 .about-timeline li.is-solo{
   background:var(--ice);border:1px solid rgba(27,144,214,.18);
   border-radius:12px;padding:16px 18px;margin-bottom:8px
 }
-.about-timeline li.is-card .tl-item,
 .about-timeline li.is-solo .tl-item{font-size:17px}
 .about-timeline li.is-solo .tl-meta em{color:var(--blue);font-weight:700}
 .about-cards{margin-top:10px}
