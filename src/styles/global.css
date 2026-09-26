@@ -418,6 +418,9 @@ html[lang=zh-CN] .pill{letter-spacing:.05em}
   margin:22px 0 0;padding-bottom:6px;border-bottom:1px solid var(--rule)
 }
 
+/* creative practice filter tabs */
+.about-filters{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 6px}
+
 /* creative practice divider + label */
 .about-divider{
   height:1px;background:var(--rule);margin:56px 0 0;border:0
