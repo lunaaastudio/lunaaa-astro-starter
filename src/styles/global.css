@@ -344,12 +344,13 @@ html[lang=zh-CN] .pill{letter-spacing:.05em}
   box-shadow:0 4px 18px rgba(11,18,38,.08)
 }
 .about-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
-.about-tags span{
+.about-tags > span{
   font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.14em;
   text-transform:uppercase;color:var(--blue);
   border:1px solid rgba(27,144,214,.35);border-radius:999px;padding:7px 14px;
   display:inline-flex;align-items:center;gap:7px
 }
+.about-tags > span > span{border:0;padding:0;display:inline}
 .about-tags svg{width:14px;height:14px;flex:none}
 .about-role{font-family:var(--sans);font-size:16.5px;color:#5a7186;margin:0}
 .about-meta{
