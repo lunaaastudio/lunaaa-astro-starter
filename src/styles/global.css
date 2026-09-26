@@ -423,6 +423,8 @@ html[lang=zh-CN] .pill{letter-spacing:.05em}
 
 /* creative practice filter tabs */
 .about-filters{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 6px}
+.about-fgroup{display:none}
+.about-fgroup.is-active{display:block}
 
 /* creative practice divider + label */
 .about-divider{
