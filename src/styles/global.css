@@ -278,6 +278,14 @@ html[lang=zh-CN] .pill{letter-spacing:.05em}
   font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;
   vertical-align:1px
 }
+.status{
+  display:inline-block;margin-left:2px;padding:2px 10px 3px;
+  border-radius:999px;font-size:10px;font-weight:600;letter-spacing:.1em;
+  text-transform:uppercase;vertical-align:1px
+}
+.status.is-reading{background:var(--blue);color:#fff}
+.status.is-read{background:transparent;border:1px solid var(--rule);color:var(--muted)}
+html[lang=zh-CN] .status{letter-spacing:.04em}
 
 .footer{
   border-top:1px solid var(--rule);padding:30px 0 42px;margin-top:20px;
