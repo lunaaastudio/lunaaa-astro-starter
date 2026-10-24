@@ -20,6 +20,15 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "brief-summary-time-clocks-and-the-ordering-of-events-in-a-distributed-system-les",
+    title: "Brief Summary: Time, Clocks, and the Ordering of Events in a Distributed System — Leslie Lamport (1978)",
+    excerpt: "Core Question: How can computers coordinate events without sharing a synchronized physical clock?",
+    content: "Three key ideas:\n1. Happened-Before Relation (→): Defines causal relationships between events. Some events are causally ordered, while others are concurrent.\n2. Logical Clocks: Assign numerical timestamps to events to preserve causal ordering without relying on physical time.\n3. Total Ordering: Combines logical timestamps with process IDs to create a consistent sequence of events across distributed systems.\nKey equation:\n\\[\na \\rightarrow b \\implies C(a)<C(b)\n\\]\n\nIf event A causally precedes event B, A must have a smaller logical timestamp. The reverse is not necessarily true.\n\nWhy it matters: These concepts underpin distributed databases, synchronization, and event coordination.\n\nMain takeaway: In distributed systems, causal relationships matter more than physical timestamps. Computers can coordinate by tracking the order of events rather than agreeing on the exact time.",
+    coverImage: "/blog-covers/brief-summary-time-clocks-and-the-ordering-of-events-in-a-distributed-system-les.jpg",
+    date: "2026-10-24",
+    dateLabel: "24 Oct 2026",
+  },
+  {
     slug: "游戏-ai-机器人技术方案演进-从脚本到大模型",
     title: "游戏 AI 机器人技术方案演进：从脚本到大模型",
     excerpt: "在和机器人初创沟通后对AI x 游戏 x 具身 有了一些新的想法",
